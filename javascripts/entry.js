@@ -1,3 +1,8 @@
+/*https://www.bilibili.com/video/BV1Y84y1L7Nn/?spm_id_from=333.337.search-card.all.click
+https://www.runoob.com/js/js-tutorial.html
+https://youtu.be/hdI2bqOjy3c?si=f0VjlX_HamU2Qf8U
+https://youtu.be/y17RuWkWdn8?si=PLdLtxmPAXuZltdP*/
+
 /*https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 https://www.w3schools.com/js/js_strict.asp*/
@@ -37,10 +42,15 @@ https://www.w3schools.com/js/js_strict.asp*/
         }
     };
 
+ /*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math   
+ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+ https://www.w3schools.com/js/js_random.asp
+ https://www.w3schools.com/jsref/jsref_random.asp*/
     function random(min,max) {
         return Math.random() * (max - min) + min;
     }
 
+/*https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById*/    
     function getElement(id) {
         const element = document.getElementById(id);
         if (!element) {
@@ -49,6 +59,7 @@ https://www.w3schools.com/js/js_strict.asp*/
         return element;
     }
 
+/*https://developer.mozilla.org/en-US/docs/Web/API/Element/classList*/  
     function addClass(element, className) {
         if (element) {
             element.classList.add(className);
@@ -61,6 +72,12 @@ https://www.w3schools.com/js/js_strict.asp*/
         }
     }
 
+/*https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+https://youtu.be/nKwKmaQ1etM?si=LIHOClQSJh0xDZLj
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring*/
     function createStarField() {
         const starry = getElement('starry');
         if (!starry) return;
@@ -104,6 +121,7 @@ https://www.w3schools.com/js/js_strict.asp*/
     }
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes*/
 class Typewriter {
     constructor(element, text, config) {
         this.element = element;
@@ -125,7 +143,10 @@ class Typewriter {
         return normal + random(0, randomVariation);
     }
 
-/*https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout*/
+/*https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout
+https://youtu.be/POX3dT-pB4E?si=FOMSiFUkq65xOqQM
+https://youtu.be/2ZphE5HcQPQ?si=zSGkDvYOQo-q1O-4
+https://youtu.be/sApSxcqwgd8?si=35HMedBLxJcPHRGH*/
     typeCharacter() {
         if (this.isSkipped) return;
 
@@ -191,6 +212,9 @@ function skipToEnd(typewriter) {
     } 
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+https://developer.mozilla.org/en-US/docs/Web/API/Location/href*/
 function setupPageTransition() {
     const enterLink = getElement('enter-link');
     if (!enterLink) return;
@@ -208,6 +232,10 @@ function setupPageTransition() {
     });
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/API/console
+https://developer.mozilla.org/en-US/docs/Web/API/console/error_static
+https://developer.mozilla.org/en-US/docs/Web/API/console/log_static
+https://developer.mozilla.org/en-US/docs/Web/API/console/warn_static*/
 function init() {
     console.log('Entry Page: Initialising ...');
 
@@ -238,6 +266,8 @@ function init() {
     console.log('Entry Page: Initialisation complete');
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState
+https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event*/
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
     } else {
