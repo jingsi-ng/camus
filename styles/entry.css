@@ -319,7 +319,7 @@ transform: translateX(20px);
     }
 }
 
-/*Responsive Design*/
+/*Responsive Design - Mobile*/
 @media (max-width: 768px) {
     .french-quote {
         font-size: 36px;

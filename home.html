@@ -13,7 +13,9 @@
 
 <body class="home-page fade-in">
 <div class="progress-bar" id="progress-bar"></div>
+
 <header>
+
     <nav class="header-nav">
     <div class="nav-container">
         <a href="home.html" class="logo">ALBERT CAMUS</a>
@@ -30,75 +32,206 @@
         <li><a href="news.html">News</a></li>
         <li><a href="about-me.html">About Me</a></li>
         </ul>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <span>☀️</span>
+            <span>🌙</span>
+        </button>
     </div>
     </nav>
+
 </header>
 
 <main>
-    <h1 class="profile fade-in-up">Personal Profile</h1>
-    <div class="photos-text">
-        <div class="first-photo fade-in-left">
-            <img src="images/first.JPG" alt="Chen See Ng-Summer">
-            <div class="photo-label">My Summer in 2025</div>
-        </div>
-        <div class="second-photo fade-in-right">
-            <img src="images/photo2.jpg" alt="Chen See Ng-Autumn">
-            <div class="photo-label-2">My Autumn in 2025</div>
-        </div>
-        <div class="center-text fade-in-up">
-            <h2>Hello, I'm Ng Chen See</h2>
-            <p class="subtitle">Interactive Digital Media Student</p>
-            <p>I'am a master student from <strong>Malaysia</strong>, currently studying Interactive Digital Media at Griffith College Dublin. With a background in Digital Humanities and History, I'am passionate about exploring the intersection of technology, creativity and storytelling. </p>
-            <p>As an <em>introvert</em>, I find joy in staying home likes reading, reflecting or just simply looking at the light change through the window. I love creating things that feel personal and meaningful and I'm always curious about how small ideas can grow into something beautiful.</p>
-            <p>
-                <strong>Based in:</strong> Dundalk, Ireland<br>
-                <strong>Born:</strong> May 6, 1997<br>
-                <strong>Interests:</strong> Reading Book, Playing Badminton
-            </p>
-            <a href="cv.html" class="button">View More</a>
-        </div>
-    </div>
 
-<section class="index-section fade-in-up">
-    <h2 class="section-text">About Me</h2>
-    <div class="index-grid">
-        <div class="personality">
-            <h3>My Personality</h3>
-            <p class="description">
-            I'm naturally introverted and when I'm in a quiet space, I feel calm and happiest. I enjoy slow mornings, books that make me think and the conversations that go beyond deep talk. I like noticing small things like the light on the wall, the sound of pages turning. Those little moments give me peace.
-            </p>
+<section class="hero-section" id="hero">
+    <div class="hero-image">
+        <figure class="hero-figure">
+            <img src="images/Albert-Camus.jpg" alt="Albert Camus at his desk" class="hero-portrait">
+            <figcaption class="image-attribution">Albert Camus (1913-1960)<br>
+            <span class="source">Source: <a href="https://literariness.org/2023/08/04/analysis-of-albert-camuss-the-plague/" target="blank" rel="noopener noreferrer" class="source-link">Literariness.org</a> </span>
+        </figcaption>
+        </figure>
+    </div>
+    <div class="hero-text">
+        <div class="hero-content">
+        <h1 class="hero-title" data-scroll-reveal>L'ABSURDE</h1>
+        <div class="underline" data-scroll-reveal data-delay="100"></div>
+        <p class="hero-subtitile" data-scroll-reveal data-delay="200">In a universe suddenly divested<br>
+        of illusions and lights,<br>
+        man feels a stranger.</p>
+        <div class="hero-bottom" data-scroll-reveal data-delay="300">
+            <span>Philosopher · Novelist · Humanist </span>
         </div>
-        <div class="myway">
-            <h3>My Way of Seeing</h3>
-            <p class="description">
-               I see the world in patterns and emotions. How a simple sound can change the mood of the place? I'm drawn to small, quiet things that often go unnoticed. I think beauty lives in subtlety and rhythm, not noise. To me, every moment, no matter how ordinary, has its own story.
-            </p>
+        <a href="#cards" class="hero-scroll" data-scroll-reveal data-delay="400">
+            Explore His Philosophy ↓ 
+        </a>
+       </div> 
+    </div>       
+</section>
+
+<section class="cards-section" id="cards">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">The Journey</h2>
+        </div>
+        <div class="cards-grid">
+            <article class="journey-cards card-1" data-scroll-reveal data-delay="0">
+                <div class="journey-header">
+                <span class="cards-list">01</span>
+                </div>
+                <h3 class="cards-title">Face the Void</h3>
+                <p class="cards-text">The universe is silent. Indifferent. Absurd. We seek meaning in a world that offers none. This is the cold shock of existence.</p>
+                <a href="sisyphus.html" class="cards-link">Read More → </a>
+            </article>
+             <article class="journey-cards card-2" data-scroll-reveal data-delay="100">
+                <div class="journey-header">
+                <span class="cards-list">02</span>
+                </div>
+                <h3 class="cards-title">Choose Defiance</h3>
+                <p class="cards-text">But we are not passive. We revolt against the absurd-not with hope, but with passionate defiance and conscious living.</p>
+                <a href="why-him.html" class="cards-link">Read More → </a>
+            </article>
+             <article class="journey-cards card-3" data-scroll-reveal data-delay="200">
+                <div class="journey-header">
+                <span class="cards-list">03</span>
+                </div>
+                <h3 class="cards-title">Embrace Life</h3>
+                <p class="cards-text">In the depth of winter, an invincible summer. Accepting absurdity liberates us to live fully, fiercely and authentically.</p>
+                <a href="works.html" class="cards-link">Read More → </a>
+            </article>
         </div>
     </div>
 </section>
 
+<section class="gallery-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Life in Images</h2>
+            <p class="section-subtitle">Albert Camus Through the Years</p>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item" data-scroll-reveal data-delay="0">
+                <img src="" alt="1930 Camus">
+                <div class="gallery-caption">
+                    <span class="caption-year">1930s</span>
+                    <span class="caption-place">Algeria - Early Years</span>
+                    <span class="caption-source"><a href="#" target="blank" rel="noopener noreferrer">Wikimedia Commons</a></span>
+                </div>
+            </div>
+            <div class="gallery-item" data-scroll-reveal data-delay="50">
+                <img src="" alt="1940 Camus">
+                <div class="gallery-caption">
+                    <span class="caption-year">1940s</span>
+                    <span class="caption-place">Paris - The Intellectual</span>
+                    <span class="caption-source"><a href="#" target="blank" rel="noopener noreferrer">Library of Congress</a></span>
+                </div>
+            </div>
+            <div class="gallery-item" data-scroll-reveal data-delay="100">
+                <img src="" alt="1944 Camus">
+                <div class="gallery-caption">
+                    <span class="caption-year">1944</span>
+                    <span class="caption-place">Combat - Resistance Fighter</span>
+                    <span class="caption-source"><a href="#" target="blank" rel="noopener noreferrer">Wikimedia Commons</a></span>
+                </div>
+            </div>
+            <div class="gallery-item" data-scroll-reveal data-delay="150">
+                <img src="" alt="1957 Camus">
+                <div class="gallery-caption">
+                    <span class="caption-year">1957</span>
+                    <span class="caption-place">Nobel - Nobel Prize in Literature</span>
+                    <span class="caption-source"><a href="#" target="blank" rel="noopener noreferrer">NobelPrize.org</a></span>
+                </div>
+            </div>
+            <div class="gallery-item" data-scroll-reveal data-delay="200">
+                <img src="" alt="1959 Camus">
+                <div class="gallery-caption">
+                    <span class="caption-year">1959</span>
+                    <span class="caption-place">France - Final Year</span>
+                    <span class="caption-source"><a href="#" target="blank" rel="noopener noreferrer">Wikimedia Commons</a></span>
+                </div>
+            </div>
+            
+      </div>  
+
+      <div class="gallery-note">
+        <p>
+            <strong>Note:</strong> Photo images represent historical timeline. All images from public domain sources. See <a href="about-me.html#references">References & Attribution</a> for complete sources.
+        </p>
+      </div>
+      <div class="gallery-cta"><a href="biography.html" class="cta-button">View Full Biography →</a></div>
+    </div>
+</section>
+
+<section class="books-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">His Major Works</h2>
+            <p class="section-subtitle">From Philosophy to Literature</p>
+        </div>
+
+        <div class="books-grid">
+            <a href="stranger.html" class="books-card" data-scroll-reveal data-delay="0">
+                <div class="books-cover">
+                    <span class="book-year">1942</span>
+                </div>
+                <h3 class="book-title">The Stranger</h3>
+                <p class="book-subtitle">L'Étranger</p>
+            </a>
+            <a href="sisyphus.html" class="books-card" data-scroll-reveal data-delay="100">
+                <div class="books-cover">
+                    <span class="book-year">1942</span>
+                </div>
+                <h3 class="book-title">The Myth of Sisyphus</h3>
+                <p class="book-subtitle">Le Mythe de Sisyphe</p>
+            </a>
+            <a href="happy-death.html" class="books-card" data-scroll-reveal data-delay="200">
+                <div class="books-cover">
+                    <span class="book-year">1971</span>
+                </div>
+                <h3 class="book-title">A Happy Death</h3>
+                <p class="book-subtitle">La Mort Heureuse</p>
+            </a>
+        </div>
+        <div class="books-cta">
+            <a href="works.html" class="cta-button">View All Works →</a>
+        </div>
+    </div>
+</section>
+
+<section class="quote-section">
+    <div class="container">
+        <div class="quote-parts">
+            <div class="quote-layer quote-french" data-scroll-reveal>
+                <p class="quote-text">Il faut imaginer Sisyphe heureux.</p>
+            </div>
+            <div class="quote-layer quote-english" data-scroll-reveal data-delay="200">
+                <p class="quote-text">One must imagine Sisyphus happy.</p>
+            </div>
+            <div class="quote-layer quote-meaning" data-scroll-reveal data-delay="400">
+                <p class="quote-explanation">
+                    Even in the face of absurdity, we find our freedom.<br>
+                    The struggle itself toward the heights is enough to fill a heart.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 </main>
 
-<footer>
-    <div class="footer">
-        <div class="footer-main"><div class="footer-top">
-             <a href="https://www.griffith.ie" target="blank"><img src="images/Unknown.png" alt="Griffith College Dublin" class="logo"></a> 
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
             <p class="footer-info">
-             <strong>Chen See Ng</strong> | Student Number: <strong>3191546</strong>
-             </p></div>
-             <div id="social-links">
-             <a href="https://www.facebook.com/si.si.18488/" class="facebook">Facebook</a>
-             <a href="https://www.instagram.com/jingsi_/" class="instagram">Instagram</a>
-             <a href="https://www.tiktok.com/@.jingsi00" class="tiktok">Tiktok</a>
-                </div>
-        </div>
- <section class="copyright">
-            	<h6>&copy;Copyright Chen See Ng 2025. All rights reserved</h6>
-            </section> 
+             &copy;Chen See Ng 2025 | 3191546 | MSc Interactive Digital Media | Web Authoring Assignment
+             </p>
+             <p class="footer-attribution">All content properly attributed. Design by Chen See Ng</p>
+             </div>
             </div>
 </footer>
+
+<script src="javascripts/main.js"></script>
 
 </body>
 </html>
