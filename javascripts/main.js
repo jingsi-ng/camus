@@ -57,3 +57,33 @@ document.querySelectorAll('a').forEach(link => {
     }
 });
 
+const timeline = document.getElementById('timeline');
+if (timeline) {
+    let active = null;
+
+    timeline.querySelectorAll('.timeline-event').forEach(event => {
+        event.addEventListener('click', () => {
+            const detail = event.querySelector('.event-detail');
+
+            if (active && active !== event) {
+                active.classList.remove('active');
+                active.querySelector('.event-detail').style.maxHeight = '0';
+            }
+            
+                if(event.classList.contains('active')) {
+                    event.classList.remove('active');
+                    detail.style.maxHeight = '0';
+                    active = null;
+                } else {
+                    event.classList.add('active');
+                    detail.style.maxHeight = detail.scrollHeight + 'px';
+                    active = event;
+
+                    setTimeout(() => event.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    }), 100);
+                }
+            });
+        });
+    }

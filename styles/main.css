@@ -604,39 +604,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.7;
 }
 
-.gallery-note {
-    margin: 3rem auto 2rem;
-    max-width: 800px;
-    padding: 1.5rem 2rem;
-    background: rgba(196, 165, 116, 0.05);
-    border: 1px dashed rgba(196, 165, 116, 0.2);
-    border-radius: 0;
-}
-
-.gallery-note p {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
-}
-
-.gallery-note strong {
-    color: var(--color-accent);
-    font-weight: 600;
-}
-
-.gallery-note a {
-    color: var(--sand-primary);
-    text-decoration: none;
-    border-bottom: 1px solid var(--border-accent);
-    transition: all 0.3s ease;
-}
-
-.gallery-note a:hover{
-    opacity: 0.7;
-}
-
 .gallery-cta {
     text-align: center;
     margin-top: 3rem;
