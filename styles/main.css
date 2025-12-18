@@ -297,6 +297,7 @@ blockquote cite {
     border-color: var(--color-accent);
 }
 
+/*Home*/
 .hero-section {
     display: grid;
     grid-template-columns: 45% 55%;
@@ -395,7 +396,7 @@ blockquote cite {
     font-weight: 700;
     line-height: 0.9;
     letter-spacing: 0.02em;
-    color: var(--color-secondary);
+    color: var(--text-dark);
     margin: 0 0 1.5rem 0;
 }
 
@@ -435,7 +436,7 @@ blockquote cite {
     text-decoration: none;
     color: var(--color-accent);
     padding: 0.75rem 1.5rem;
-    border: 1px dashed var(--color-accent);
+    border: 1px dashed var(--border-accent);
     transition: all 0.3s ease;
 }
 
@@ -447,7 +448,7 @@ blockquote cite {
 
 .cards-section {
     padding: 8rem 2rem;
-    
+    background: var(--bg-card);
 }
 
 .container {
@@ -458,6 +459,132 @@ blockquote cite {
     padding-right: 2rem;
     width: 100%;
 }
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.cards-card {
+    background: var(--bg-primary);
+    border: 2px dashed var(--color-accent);
+    border-radius: 0;
+    padding: 2.5rem;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cards-card:hover {
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.15);
+    transform: translate(-2px, -2px);
+}
+
+.card-1 {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: rgba(100, 150, 200, 0.6);
+    border-color: rgba(100, 150, 200, 0.3);
+}
+
+.card-2 {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #faf8f5 100%);
+    color: rgba(196, 165, 116, 0.7);
+    border-color: rgba(196, 165, 116, 0.4);
+}
+
+.card-3 {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #fdf9f3 100%);
+    color: var(--color-accent);
+    border-color: var(--border-accent);
+}
+
+.cards-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.cards-card .cards-list {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.cards-card .cards-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.cards-card .cards-text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 2rem;
+}
+
+.cards-card .cards-link {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 2px solid var(--border-accent);
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.cards-card .cards-link:hover {
+    border-bottom-width: 3px;
+    transform: translateX(4px);
+}
+
+.gallery-section {
+    padding: 8rem 2rem;
+    background: var(--bg-dark);
+}
+
+.gallery-section .section-title {
+    color: var(--color-secondary);
+}
+
+.gallery-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.gallery {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 3rem 0;
+    scroll-snap-type: x mandatory;
+    margin-top: 4rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    position: relative;
+    cursor: pointer;
+}
+
+
 
 /*Responsive Design - Mobile*/
 @media (max-width: 768px) {
@@ -470,7 +597,7 @@ blockquote cite {
     .hero-image {
         grid-row: 1;
         border-right: none;
-        border-bottom: 1px dashed var(--color-accent);
+        border-bottom: 1px dashed var(--border-accent);
     }
 
     .hero-portrait {
