@@ -272,3 +272,23 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 })();
+
+/*Scroll Top*/
+const scrollTopBtn = document.getElementById('scroll-top');
+
+if (scrollTopBtn) {
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 500) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}

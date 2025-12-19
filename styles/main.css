@@ -1186,6 +1186,33 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    background: var(--color-accent);
+    color: var(--bg-dark);
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    transition: all var(--transition-fast);
+}
+
+.scroll-top:hover {
+    background: var(--sand-dark);
+    transform: translateY(-2px);
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
 /*Works*/
 .carousel-section {
     padding: 6rem 0;
@@ -1925,6 +1952,7 @@ blockquote cite::before {
 
 .news-article:hover {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
 }
 
 .article-image {
