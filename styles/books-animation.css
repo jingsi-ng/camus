@@ -202,3 +202,150 @@
     transform: rotate(20deg) translateY(0);
   }
 }
+
+/*Stranger*/
+.stranger-page {
+    position: relative;
+}
+
+.sun-animation {
+    position: fixed;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.1;
+}
+
+.sun {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.sun-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #c4a574 0%, #a08050 40%, #806030 70%, transparent 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(196, 165, 116, 0.6), 0 0 100px rgba(196, 165, 116, 0.4), 0 0 150px rgba(196, 165, 116, 0.2);
+    animation: sun-pulse 6s ease-in-out infinite;
+}
+
+.sun-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    animation: rays-rotate 40s linear infinite;
+}
+
+.sun-rays .ray {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(196, 165, 116, 0.8) 0%, rgba(196, 165, 116, 0.4) 40%, transparent 100%);
+    transform-origin: left center;
+}
+
+
+.sun-rays .ray:nth-child(1)  { 
+    transform: rotate(0deg); 
+}
+
+.sun-rays .ray:nth-child(2)  { 
+    transform: rotate(30deg); 
+}
+
+.sun-rays .ray:nth-child(3)  { 
+    transform: rotate(60deg); 
+}
+
+.sun-rays .ray:nth-child(4)  { 
+    transform: rotate(90deg); 
+}
+
+.sun-rays .ray:nth-child(5)  { 
+    transform: rotate(120deg); 
+}
+
+.sun-rays .ray:nth-child(6)  { 
+    transform: rotate(150deg); 
+}
+
+.sun-rays .ray:nth-child(7)  { 
+    transform: rotate(180deg); 
+}
+
+.sun-rays .ray:nth-child(8)  { 
+    transform: rotate(210deg); 
+}
+
+.sun-rays .ray:nth-child(9)  { 
+    transform: rotate(240deg); 
+}
+
+.sun-rays .ray:nth-child(10) { 
+    transform: rotate(270deg); 
+}
+
+.sun-rays .ray:nth-child(11) { 
+    transform: rotate(300deg); 
+}
+
+.sun-rays .ray:nth-child(12) { 
+    transform: rotate(330deg); 
+}
+
+.heat-shimmer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, rgba(196, 165, 116, 0.08) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+    animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes sun-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 50px rgba(196, 165, 116, 0.6), 0 0 100px rgba(196, 165, 116, 0.4), 0 0 150px rgba(196, 165, 116, 0.2);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    box-shadow: 0 0 70px rgba(196, 165, 116, 0.8), 0 0 140px rgba(196, 165, 116, 0.5), 0 0 200px rgba(196, 165, 116, 0.3);
+  }
+}
+
+@keyframes rays-rotate {
+  from { 
+    transform: translate(-50%, -50%) rotate(0deg); 
+  }
+  to { 
+    transform: translate(-50%, -50%) rotate(360deg); 
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scaleY(1.1);
+  }
+}
