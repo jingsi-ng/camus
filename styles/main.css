@@ -1891,6 +1891,8 @@ h1, h2, h3, h4, h5, h6 {
     flex-shrink: 0;
 }
 
+
+
 [data-scroll-reveal] {
     opacity: 0;
     transform: translateY(30px);
@@ -1907,3 +1909,5 @@ h1, h2, h3, h4, h5, h6 {
         filter: grayscale(100%) !important;
     }
 }
+
+/*Responsive*/
