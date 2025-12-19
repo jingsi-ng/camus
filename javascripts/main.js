@@ -1,3 +1,4 @@
+/*Scroll Reveal*/
 if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -12,7 +13,7 @@ if ('IntersectionObserver' in window) {
     document.querySelectorAll('[data-scroll-reveal]').forEach(el => observer.observe(el));
 }
 
-
+/*Mobile Nav*/
 const menuToggle = document.getElementById('mobile-menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
@@ -37,20 +38,27 @@ if (menuToggle && navLinks) {
     });
 }
 
-
-document.body.classList.add('fade-in');
-
-document.querySelectorAll('a').forEach(link => {
-    if (link.hostname === window.location.hostname && link.target !== '_blank' && !link.href.includes('#')) {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => window.location.href = link.href, 300);
+/*Image Lazy*/
+const images = document.querySelectorAll('img[data-src]');
+  
+  if (images.length > 0 && 'IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          observer.unobserve(img);
+        }
+      });
     });
-    }
-});
+    
+    images.forEach(img => {
+      imageObserver.observe(img);
+    });
+}
 
-
+/*Bio Timeline*/
 const timeline = document.getElementById('timeline');
 if (timeline) {
     let active = null;
@@ -81,8 +89,21 @@ if (timeline) {
             });
         });
 }
+  
+/*Citation*/
+const citations = document.querySelectorAll('.citation a');
+  
+  citations.forEach(citation => {
+    citation.addEventListener('click', function(e) {
+      // Add a subtle animation when clicking citation
+      this.style.transform = 'scale(1.1)';
+      setTimeout(() => {
+        this.style.transform = '';
+      }, 200);
+    });
+});
 
-
+/*Works Carousel*/
 (function() {
   'use strict';
 
