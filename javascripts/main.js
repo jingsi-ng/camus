@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   fadeElements.forEach(el => {
     el.style.opacity = '0';
-    e.style.transform = 'translateY(20px)';
+    el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
 
     setTimeout(() => {
