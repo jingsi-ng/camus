@@ -1,3 +1,19 @@
+/*Fade In*/
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  fadeElements.forEach(el => {
+    el.style.opacity = '0';
+    e.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+
+    setTimeout(() => {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    }, 100);
+  });
+});
+
 /*Scroll Reveal*/
 if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {

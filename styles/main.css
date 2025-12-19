@@ -1264,25 +1264,10 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(196, 165, 116, 0.5);
 }
 
-.book-content {
-    text-align: center;
-    padding: 2rem;
-}
-
-.book-content h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--color-secondary);
-    margin: 0 0 1rem 0;
-    letter-spacing: 0.15em;
-}
-
-.book-year {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    color: var(--color-accent);
-    font-weight: 700;
-    line-height: 1;
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .book-info {
@@ -1477,7 +1462,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-muted);
 }
 
-.work--source a {
+.work-source a {
     color: var(--color-accent);
     text-decoration: underline;
 }
@@ -1648,40 +1633,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.7;
     color: var(--text-secondary);
     margin: 0;
-}
-
-.related-works {
-    padding: 4rem 0;
-    background: var(--bg-dark);
-    text-align: center;
-}
-
-.related-works h2 {
-    color: var(--color-secondary);
-    margin-bottom: 2rem;
-}
-
-.related-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.related-link {
-    font-family: var(--font-heading);
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    padding: 1rem 2rem;
-    border: 1px dashed var(--color-accent);
-    transition: all var(--transition-fast);
-}
-
-.related-link:hover {
-    background: var(--color-accent);
-    color: var(--bg-dark);
 }
 
 /*Explore*/
@@ -2088,13 +2039,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*About*/
-.about-hero {
+.about-section {
     background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a1a 100%);
     padding: 8rem 0 4rem;
     border-bottom: 1px solid var(--color-accent);
 }
 
-.about-hero-content {
+.about-hero {
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 4rem;
@@ -2153,7 +2104,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-.about-section h2 {
+.about-part h2 {
     font-size: 1.5rem;
     margin: 0 0 1.5rem 0;
     color: var(--text-primary);
@@ -2161,20 +2112,20 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 2px solid var(--color-accent);
 }
 
-.about-section p {
+.about-part p {
     font-size: 1rem;
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 1rem;
 }
 
-.about-section ul {
+.about-part ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.about-section li {
+.about-part li {
     font-size: 0.95rem;
     color: var(--text-secondary);
     padding: 0.75rem 0;
@@ -2183,11 +2134,11 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid var(--border-primary);
 }
 
-.about-section li:last-child {
+.about-part li:last-child {
     border-bottom: none;
 }
 
-.about-section li::before {
+.about-part li::before {
     content: '→';
     position: absolute;
     left: 0;
@@ -2195,7 +2146,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .references-section {
-    padding: var(--section-padding) 0;
+    padding: 8rem 0;
     background: var(--bg-primary);
     border-top: 1px solid var(--border-primary);
 }
@@ -2327,6 +2278,38 @@ h1, h2, h3, h4, h5, h6 {
 .why-content {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.why-image {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.why-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) contrast(1.1);
+    border: 1px dashed var(--color-accent);
+    transition: filter 0.6s ease;
+}
+
+.why-image:hover img {
+    filter: grayscale(50%) contrast(1.05);
+}
+
+.why-image .image-source {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+.why-image .image-source a {
+    color: var(--color-accent);
+    text-decoration: underline;
 }
 
 .why-content h2 {
@@ -2516,7 +2499,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2.5rem;
     }
     
-    .hero-subtitile {
+    .hero-subtitle {
         font-size: 1.125rem;
     }
 
@@ -2626,50 +2609,91 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .news-hero {
-    padding: 6rem 0 3rem;
+        padding: 6rem 0 3rem;
   }
   
   .news-section {
-    padding: 4rem 0;
+        padding: 4rem 0;
   }
   
   .news-grid {
-    gap: 3rem;
+        gap: 3rem;
   }
   
   .article-image img {
-    height: 200px;
+        height: 200px;
   }
   
   .article-content {
-    padding: 1.5rem;
+        padding: 1.5rem;
   }
   
   .article-title {
-    font-size: 1.5rem;
+        font-size: 1.5rem;
   }
   
   .article-meta span {
-    display: block;
-    margin-right: 0;
-    margin-bottom: 0.25rem;
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+  }
+
+   .books-card:hover, .cards-card:hover {
+        transform: none;
+    }
+    
+    .about-section {
+        padding: 6rem 0 3rem;
+  }
+  
+  .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+  }
+  
+  .about-photo {
+        max-width: 180px;
+        margin: 0 auto;
+  }
+  
+  .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+  }
+  
+  .why-content p {
+        font-size: 1rem;
+  }
+  
+  .reference-category {
+        margin-bottom: 2rem;
+  }
+  
+  .reference-list li {
+        padding: 0.75rem 0 0.75rem 1.25rem;
+        font-size: 0.875rem;
+  }
+  
+  .contact-links {
+        flex-direction: column;
+        align-items: center;
   }
 }
 
 /* Video responsive*/
 .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -2680,45 +2704,4 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         justify-content: center;
     }
-
-    .books-card:hover, .cards-card:hover {
-        transform: none;
-    }
-
-    .about-hero {
-    padding: 6rem 0 3rem;
-  }
-  
-  .about-hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  
-  .about-photo {
-    max-width: 180px;
-    margin: 0 auto;
-  }
-  
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .why-content p {
-    font-size: 1rem;
-  }
-  
-  .reference-category {
-    margin-bottom: 2rem;
-  }
-  
-  .reference-list li {
-    padding: 0.75rem 0 0.75rem 1.25rem;
-    font-size: 0.875rem;
-  }
-  
-  .contact-links {
-    flex-direction: column;
-    align-items: center;
-  }
 }
