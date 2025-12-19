@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Albert Camus - Home</title>
+<title>Albert Camus - Bio</title>
 <link rel="stylesheet" href="styles/main.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,14 +12,13 @@
 </head>
 
 <body class="bio-page fade-in">
-<div class="progress-bar" id="progress-bar"></div>
 
 <header>
 
     <nav class="header-nav">
     <div class="nav-container">
         <a href="home.html" class="logo">ALBERT CAMUS</a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle meunu">
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
@@ -38,10 +37,25 @@
 </header>
 
 <main>
+
     <section class="page-section">
         <div class="container">
             <h1 class="page-title">Biography</h1>
-            <p class="page-subtile">1913 - 1660 · From Algerian poverty to Nobel Prize</p>
+            <p class="page-subtitle">1913 - 1960 · From Algerian poverty to Nobel Prize</p>
+        </div>
+    </section>
+
+    <section class="key-facts">
+        <div class="container">
+            <div class="facts-row">
+                <span class="fact">Born Mondovi, Algeria</span>
+                <span class="fact-dot">·</span>
+                <span class="fact">Nobel Prize at 44</span>
+                <span class="fact-dot">·</span>
+                <span class="fact">7 Major Works</span>
+                <span class="fact-dot">·</span>
+                <span class="fact">Died at 46</span>
+            </div>
         </div>
     </section>
 
@@ -76,7 +90,7 @@
                 </div>
             <div class="timeline-event" data-year="1942">
                     <div class="event-dot"></div>
-                    <div class="event-year"></div>
+                    <div class="event-year">1942</div>
                     <div class="event-title">The Stranger Published</div>
                     <div class="event-detail">
                     <p>
@@ -137,6 +151,63 @@
         </div>
     </section>
 
+    <section class="bio-gallery" id="gallery">
+    <div class="container">
+            <h2 class="section-title">Life in Images</h2>
+            <p class="section-subtitle">Albert Camus Through the Years</p>
+
+        <div class="gallery-all">
+            <div class="gallery-item" data-scroll-reveal data-delay="0">
+                <img src="images/1920.jpg" alt="1920 Camus and his younger brother" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="caption-year">1920</span>
+                    <span class="caption-place">Algeria</span>
+                    <span class="caption-source"><a href="https://commons.wikimedia.org/wiki/Category:Portraits_of_Albert_Camus" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span>
+                </div>
+            </div>
+            <div class="gallery-item" data-scroll-reveal data-delay="50">
+                <img src="images/Journal_Combat.jpg" alt="1944 Camus" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="caption-year">1944</span>
+                    <span class="caption-place">Combat</span>
+                    <span class="caption-source"><a href="https://commons.wikimedia.org/wiki/Category:Albert_Camus" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span>
+                </div>
+            </div>
+            <div class="gallery-item" data-scroll-reveal data-delay="100">
+                <img src="images/1949.jpg" alt="1949 Camus" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="caption-year">1949</span>
+                    <span class="caption-place">Brazil</span>
+                    <span class="caption-source"><a href="https://commons.wikimedia.org/wiki/Category:Albert_Camus" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span>
+                </div>
+            </div>
+            <div class="gallery-item" data-scroll-reveal data-delay="150">
+                <img src="images/1957.jpg" alt="1957 Camus" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="caption-year">1957</span>
+                    <span class="caption-place">United States</span>
+                    <span class="caption-source"><a href="https://en.wikipedia.org/wiki/Albert_Camus" target="_blank" rel="noopener noreferrer">Wikipedia.org</a></span>
+                </div>
+            </div>
+            <div class="gallery-item" data-scroll-reveal data-delay="200">
+                <img src="images/1959.jpg" alt="1959 Camus" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="caption-year">1959</span>
+                    <span class="caption-place">France</span>
+                    <span class="caption-source"><a href="https://flashbak.com/albert-camuss-stirring-letter-inspirational-teacher-winning-nobel-prize-395133/the-12th-international-cannes-film-festival-france-03-may-1959/" target="_blank" rel="noopener noreferrer">flashbak.com</a></span>
+                </div>
+            </div>
+            <div class="gallery-item" data-scroll-reveal data-delay="250">
+                <img src="images/1960.jpeg" alt="1960 Camus" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="caption-year">1960</span>
+                    <span class="caption-place">France</span>
+                     <span class="caption-source"><a href="https://en.wikipedia.org/wiki/Albert_Camus" target="_blank" rel="noopener noreferrer">Wikipedia.org</a></span>
+            </div>
+      </div>  
+    </div>
+</section>
+
     <section class="bio-section">
         <div class="container">
             <div class="bio-grid">
@@ -166,9 +237,22 @@
                         Passionate about football (soccer), theatre and the Mediterranean sun. Died tragically at 46<sup class="citation"><a href="https://en.wikipedia.org/wiki/Albert_Camus" target="_blank" rel="noopener noreferrer">[2]</a></sup>.
                     </p>
                 </div>
+                 <div class="bio-cards">
+                    <h3>Literary Style</h3>
+                    <p>Known for clear, precise prose that rejected flowery language<sup class="citation"><a href="https://www.britannica.com/biography/Albert-Camus" target="_blank" rel="noopener noreferrer">[1]</a></sup>.
+                        His writing combined philosophical depth with accessibility, making complex ideas understandable to ordinary readers<sup class="citation"><a href="https://plato.stanford.edu/entries/camus/" target="_blank" rel="noopener noreferrer">[3]</a></sup>.
+                    </p>
+                </div>
+                 <div class="bio-cards">
+                    <h3>Legacy</h3>
+                    <p>Remains one of the most widely read French authors worldwide<sup class="citation"><a href="https://en.wikipedia.org/wiki/Albert_Camus" target="_blank" rel="noopener noreferrer">[2]</a></sup>.
+                        His ideas on absurdism, revolt and human dignity continue to influence philosophy, literature and popular culture today<sup class="citation"><a href="https://plato.stanford.edu/entries/camus/" target="_blank" rel="noopener noreferrer">[3]</a></sup>.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
+    
 </main>
 
 <footer class="footer">

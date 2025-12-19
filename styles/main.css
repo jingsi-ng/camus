@@ -114,16 +114,6 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.05em;
 }
 
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--sand-secondary);
-    z-index: 200;
-}
-
 ::selection {
     background-color: #c4a574 ;
     color: #ffffff;
@@ -814,7 +804,7 @@ h1, h2, h3, h4, h5, h6 {
 /*Bio*/
 .page-section {
     background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a1a 100%);
-    padding: 6rem 0.4rem;
+    padding: 7rem 0.4rem;
     text-align: center;
     border-bottom: 1px solid var(--color-accent);
 }
@@ -833,8 +823,34 @@ h1, h2, h3, h4, h5, h6 {
     font-size: clamp(0.9rem, 2vw, 1.15rem);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--sand-muted);
+    color: var(--sand-secondary);
     margin: 0;
+}
+
+.key-facts {
+    padding: 2.5rem 0;
+    border-bottom: 1px dashed var(--border-primary);
+}
+
+.facts-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.fact {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+}
+
+.fact-dot {
+    color: var(--color-accent);
+    font-size: 1.25rem;
 }
 
 .timeline-section {
@@ -983,6 +999,33 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
+.detail-link {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.detail-link:hover {
+    color: var(--sand-dark);
+    transform: translateX(5px);
+}
+
+.bio-gallery {
+    padding: 8rem 0;
+    background: var(--bg-secondary);
+}
+
+.gallery-all {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 .bio-section {
     padding: 8rem 0;
     background: var(--bg-secondary);
@@ -1009,12 +1052,292 @@ h1, h2, h3, h4, h5, h6 {
 
 .bio-cards h3 {
     font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 1rem 0;
+}
+
+.bio-cards p {
+    font-size: 0.95rem;
     line-height: 1.8;
     color: var(--text-secondary);
     margin: 0;
 }
 
+/*Works*/
+.carousel-section {
+    padding: 6rem 0;
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
 
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    perspective: 1200px;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    position: relative;
+}
+
+.carousel-books {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book {
+    position: absolute;
+    width: 240px;
+    left: 50%;
+    top: 50%;
+    filter: blur(2px);
+    cursor: pointer;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0.4;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book[data-index="0"] {
+    transform: translateX(-180%) translateY(-50%) rotateY(25deg) scale(0.85);
+    z-index: 1;
+}
+
+.book[data-index="1"], .book.featured {
+    transform: translateX(-50%) translateY(-50%) rotateY(0deg) scale(1);
+    opacity: 1;
+    filter: blur(0);
+    z-index: 10;
+}
+
+.book[data-index="2"] {
+    transform: translateX(80%) translateY(-50%) rotateY(-25deg) scale(0.85);
+    z-index: 1;
+}
+
+.book-cover {
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(135deg, #2b2b2b 0%, #1a1a1a 100%);
+    border: 2px dashed var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 60px rgba(196, 165, 116, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.book-cover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+}
+
+.book.featured .book-cover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(196, 165, 116, 0.3), inset 0 0 80px rgba(196, 165, 116, 0.15);
+}
+
+.book-cover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(196, 165, 116, 0.5);
+}
+
+.book-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.book-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.15em;
+}
+
+.book-year {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--color-accent);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.book-info {
+    text-align: center;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: all 0.4s ease;
+}
+
+.book.featured .book-info {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.book-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.25rem 0;
+    color: var(--text-primary);
+}
+
+.book-subtitle {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0 0 1rem 0;
+}
+
+.book-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0 0 1rem 0;
+}
+
+.book-detail-link {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+.book-detail-link:hover {
+    border-bottom-color: var(--color-accent);
+}
+
+.carousel-prev, .carousel-next {
+    width: 50px;
+     height: 50px;
+    background: transparent;
+    border: 2px dashed var(--color-accent);
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background: var(--color-accent);
+    color: var(--bg-dark);
+}
+
+.carousel-instruction {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.carousel-instruction p {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.all-works {
+    padding: 8rem 0;
+    background: var(--bg-primary);
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.work-category {
+    background: var(--bg-card);
+    padding: 2rem;
+}
+
+.category-title {
+    font-size: 1.125rem;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-accent);
+    color: var(--text-primary);
+}
+
+.works-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.works-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.works-list li:last-child {
+    border-bottom: none;
+}
+
+.works-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-fast);
+}
+
+.works-list a:hover {
+    color: var(--color-accent);
+}
+
+.works-list a:hover .work-name {
+    transform: translateX(5px);
+}
+
+.work-name {
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: transform var(--transition-fast);
+}
+
+.work-year {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
 
 [data-scroll-reveal] {
     opacity: 0;
@@ -1138,6 +1461,15 @@ h1, h2, h3, h4, h5, h6 {
         padding: 4rem 0.2rem;
     }
 
+    .facts-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .fact-dot {
+        display: none;
+    }
+
     .timeline-section {
         padding: 4rem 0;
     }
@@ -1172,6 +1504,11 @@ h1, h2, h3, h4, h5, h6 {
 
     .event-detail p {
         font-size: 0.85rem;
+    }
+
+    .gallery-all {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .bio-grid {
@@ -1253,6 +1590,11 @@ h1, h2, h3, h4, h5, h6 {
 
     .event-title {
         font-size: 1.15rem;
+    }
+
+    .gallery-all {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     .bio-grid {
