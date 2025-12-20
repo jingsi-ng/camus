@@ -12,6 +12,7 @@
     --text-secondary: #4a4a4a;
     --text-tertiary: #6b6b6b;
     --text-muted: #999999;
+    --text-dark: #ffffff;
 
     --border-primary: #e0e0e0;
     --border-accent: #c4a574;
@@ -1717,6 +1718,30 @@ blockquote cite::before {
     margin: 0 0 1rem 0;
 }
 
+.explore-intro {
+    padding: 4rem 0;
+    text-align: center;
+    border-bottom: 1px dashed var(--border-primary);
+    background: var(--bg-secondary);
+}
+
+.explore-intro .intro-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+}
+
+.explore-intro .intro-subtext {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
 .explore-section {
     padding: 8rem 0;
 }
@@ -1929,6 +1954,18 @@ blockquote cite::before {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--sand-muted);
+}
+
+.news-hero .hero-intro {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
 }
 
 .news-section {
