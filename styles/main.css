@@ -1995,23 +1995,75 @@ blockquote cite::before {
     background: var(--bg-primary);
 }
 
-.news-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 4rem;
-    max-width: 800px;
+.news-timeline {
+    position: relative;
+    padding-left: 4rem;
+    max-width: 850px;
     margin: 0 auto;
 }
 
-.news-article {
+.news-timeline .timeline-track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--color-accent), var(--border-primary) 50%, var(--color-accent));
+}
+
+.news-timeline .news-article {
+    position: relative;
     background: var(--bg-secondary);
+    margin-bottom: 4rem;
     overflow: hidden;
     transition: all var(--transition-fast);
 }
 
-.news-article:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+.news-timeline .news-article:last-child {
+    margin-bottom: 0;
+}
+
+.news-timeline .news-article:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     transform: translateY(-4px);
+}
+
+.article-marker {
+    position: absolute;
+    left: -4rem;
+    top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.article-marker::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: var(--bg-primary);
+    border: 3px dashed var(--color-accent);
+    transform: rotate(45deg);
+    transition: all var(--transition-fast);
+}
+
+.news-article:hover .article-marker::before {
+    background: var(--color-accent);
+    transform: rotate(45deg) scale(1.2);
+}
+
+.marker-year {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color:var(--sand-secondary);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    margin-top: 0.5rem;
 }
 
 .article-image {
@@ -2077,13 +2129,6 @@ blockquote cite::before {
     line-height: 1.3;
 }
 
-.article-excerpt {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-}
-
 .article-body {
     font-size: 1rem;
     line-height: 1.9;
@@ -2097,37 +2142,6 @@ blockquote cite::before {
 .article-body a {
     color: var(--color-accent);
     text-decoration: underline;
-}
-
-.read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-heading);
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    transition: all var(--transition-fast);
-}
-
-.read-more:hover {
-    color: var(--sand-dark);
-}
-
-.read-more-arrow {
-    transition: transform var(--transition-fast);
-}
-
-.read-more:hover .read-more-arrow {
-    transform: translateX(5px);
-}
-
-.article-divider {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--color-accent), transparent);
-    margin: 0;
 }
 
 .news-sources {
@@ -2764,8 +2778,33 @@ blockquote cite::before {
         padding: 4rem 0;
   }
   
-  .news-grid {
-        gap: 3rem;
+  .news-timeline {
+        padding-left: 0;
+  }
+
+  .news-timeline .timeline-track {
+    display: none;
+  }
+
+  .article-marker {
+    position: static;
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+    background: var(--bg-dark);
+    gap: 1rem;
+  }
+
+  .article-marker::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .marker-year {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    margin-top: 0;
   }
   
   .article-image img {
