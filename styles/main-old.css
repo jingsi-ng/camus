@@ -534,7 +534,6 @@ h1, h2, h3, h4, h5, h6 {
 .cards-card {
     background: var(--bg-primary);
     border: 2px dashed var(--color-accent);
-    border-radius: 0;
     padding: 2.5rem;
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -547,14 +546,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-1 {
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-    color: rgba(100, 150, 200, 0.6);
-    border-color: rgba(100, 150, 200, 0.3);
+    color: var(--text-primary);
+    border-color: var(--border-primary);
 }
 
 .card-2 {
-    background: linear-gradient(135deg, var(--bg-primary) 0%, #faf8f5 100%);
-    color: rgba(196, 165, 116, 0.7);
-    border-color: rgba(196, 165, 116, 0.4);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--sand-primary);
+    border-color: var(--border-accent);
 }
 
 .card-3 {
@@ -788,7 +787,6 @@ h1, h2, h3, h4, h5, h6 {
     aspect-ratio: 2/3;
     background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a1a 100%);
     border: 2px dashed var(--sand-primary);
-    border-radius: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1028,7 +1026,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 16px;
     background: var(--bg-primary);
     border: 3px dashed var(--text-tertiary);
-    border-radius: 0;
     z-index: 2;
     transform: translateX(-50%);
     transition: all var(--transition-fast);
@@ -1112,7 +1109,6 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-weight: 600;
     padding: 0.2em 0.3em;
-    border-radius: o;
     transition: all var(--transition-fast);
 }
 
@@ -1754,7 +1750,6 @@ blockquote cite::before {
     width: 6px;
     height: 6px;
     background: var(--sand-primary);
-    border-radius: 0;
     transform: rotate(45deg);
 }
 
@@ -2015,7 +2010,6 @@ blockquote cite::before {
     position: relative;
     background: var(--bg-secondary);
     margin-bottom: 4rem;
-    overflow: hidden;
     transition: all var(--transition-fast);
 }
 
@@ -2056,7 +2050,7 @@ blockquote cite::before {
 
 .marker-year {
     font-family: var(--font-heading);
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     color:var(--sand-secondary);
@@ -2156,13 +2150,13 @@ blockquote cite::before {
 
 .news-sources h3 {
     font-size: 1rem;
-    margin: 0 0 1rem 0;
-    color: var(--text-tertiary);
+    margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
 .news-sources p {
-    font-size: 0.875rem;
-    line-height: 1.8;
+    font-size: 0.9rem;
+    line-height: 1.7;
     color: var(--text-secondary);
 }
 
@@ -2193,7 +2187,6 @@ blockquote cite::before {
 
 .about-photo img {
     width: 100%;
-    border-radius: 0;
     border: 3px dashed var(--color-accent);
     filter: grayscale(50%);
     transition: filter 0.5s ease;
@@ -2360,7 +2353,6 @@ blockquote cite::before {
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.2em 0.5em;
-    border-radius: 0;
     margin-right: 0.5rem;
 }
 
@@ -2774,19 +2766,19 @@ blockquote cite::before {
         padding: 6rem 0 3rem;
   }
   
-  .news-section {
+    .news-section {
         padding: 4rem 0;
   }
   
-  .news-timeline {
+    .news-timeline {
         padding-left: 0;
   }
 
-  .news-timeline .timeline-track {
+    .news-timeline .timeline-track {
     display: none;
   }
 
-  .article-marker {
+    .article-marker {
     position: static;
     flex-direction: row;
     padding: 1rem 1.5rem;
@@ -2794,12 +2786,12 @@ blockquote cite::before {
     gap: 1rem;
   }
 
-  .article-marker::before {
+    .article-marker::before {
     width: 10px;
     height: 10px;
   }
 
-  .marker-year {
+    .marker-year {
     writing-mode: horizontal-tb;
     transform: none;
     font-size: 0.9rem;
@@ -2807,25 +2799,25 @@ blockquote cite::before {
     margin-top: 0;
   }
   
-  .article-image img {
+    .article-image img {
         height: 200px;
   }
   
-  .article-content {
+    .article-content {
         padding: 1.5rem;
   }
   
-  .article-title {
+    .article-title {
         font-size: 1.5rem;
   }
   
-  .article-meta span {
+    .article-meta span {
         display: block;
         margin-right: 0;
         margin-bottom: 0.25rem;
   }
 
-   .books-card:hover, .cards-card:hover {
+    .books-card:hover, .cards-card:hover {
         transform: none;
     }
     
@@ -2833,35 +2825,35 @@ blockquote cite::before {
         padding: 6rem 0 3rem;
   }
   
-  .about-content {
+    .about-content {
         grid-template-columns: 1fr;
         text-align: center;
   }
   
-  .about-photo {
+    .about-photo {
         max-width: 180px;
         margin: 0 auto;
   }
   
-  .about-grid {
+    .about-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
   }
   
-  .why-content p {
+    .why-content p {
         font-size: 1rem;
   }
   
-  .reference-category {
+    .reference-category {
         margin-bottom: 2rem;
   }
   
-  .reference-list li {
+    .reference-list li {
         padding: 0.75rem 0 0.75rem 1.25rem;
         font-size: 0.875rem;
   }
   
-  .contact-links {
+    .contact-links {
         flex-direction: column;
         align-items: center;
   }
