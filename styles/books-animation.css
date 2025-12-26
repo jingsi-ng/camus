@@ -1,4 +1,7 @@
 /*Sisyphus*/
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/position
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout
+https://www.w3schools.com/css/css_positioning.asp*/
 .sisyphus-page {
   position: relative;
 }
@@ -15,6 +18,8 @@
   opacity: 0.12;
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/SVG
+https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon*/
 .mountain-svg {
   position: absolute;
   bottom: 0;
@@ -32,6 +37,9 @@
   stroke-width: 2;
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+https://developer.mozilla.org/en-US/docs/Web/CSS/::before
+https://developer.mozilla.org/en-US/docs/Web/CSS/::after*/
 .sisyphus-figure {
   position: absolute;
   bottom: 15%;
@@ -94,23 +102,19 @@
   transform: rotate(10deg);
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+https://www.w3schools.com/css/css3_gradients_radial.asp
+https://www.w3schools.com/css/css3_shadows_box.asp*/
 .sisyphus-animation .boulder {
   position: absolute;
   width: 50px;
   height: 50px;
-  background: radial-gradient(
-    circle at 35% 35%,
-    #7a7a7a 0%,
-    #4a4a4a 40%,
-    #2b2b2b 100%
-  );
+  background: radial-gradient(circle at 35% 35%, #7a7a7a 0%, #4a4a4a 40%, #2b2b2b 100%);
   border-radius: 50%;
   bottom: 15%;
   right: 52%;
-  box-shadow: 
-    inset -6px -6px 15px rgba(0, 0, 0, 0.5),
-    inset 3px 3px 8px rgba(255, 255, 255, 0.1),
-    0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: inset -6px -6px 15px rgba(0, 0, 0, 0.5), inset 3px 3px 8px rgba(255, 255, 255, 0.1), 0 4px 12px rgba(0, 0, 0, 0.3);
   animation: boulder-roll 12s ease-in-out infinite;
 }
 
@@ -136,7 +140,10 @@
   border-radius: 50%;
 }
 
-
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
+https://www.w3schools.com/css/css3_animations.asp
+https://youtu.be/SgmNxE9lWcY?si=eL-BDiz5qxFEiq2h*/
 @keyframes boulder-roll {
   0% {
     bottom: 15%;
@@ -225,6 +232,7 @@
     height: 100%;
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/animation*/
 .sun-core {
     position: absolute;
     top: 50%;
@@ -367,6 +375,8 @@
     opacity: 0.2;
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay*/
 .particles-animation .happy-particle {
     position: absolute;
     bottom: -20px;
@@ -431,6 +441,9 @@
   }
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/Seizure_disorders
+https://web.dev/prefers-reduced-motion/*/
 @media (prefers-reduced-motion: reduce) {
   .boulder, .sisyphus-figure, .sun-core, .sun-rays, .heat-shimmer, .particles-animation .happy-particle {
     animation: none !important;

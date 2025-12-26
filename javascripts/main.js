@@ -1,4 +1,7 @@
 /*Fade In*/
+/*https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+https://www.w3schools.com/jsref/met_document_queryselectorall.asp*/
 document.addEventListener('DOMContentLoaded', function() {
   const fadeElements = document.querySelectorAll('.fade-in');
 
@@ -15,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /*Scroll Reveal*/
+/*https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+https://youtu.be/2IbRtjez6ag?si=Ng5090WXVIjT8O2R
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset*/
 if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -33,9 +39,16 @@ if ('IntersectionObserver' in window) {
 document.addEventListener('DOMContentLoaded', function() {
 
  /*Nav*/
+ /*https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector*/
   const menuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
+/*https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle
+https://developer.mozilla.org/en-US/docs/Web/CSS/:not
+https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator
+https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
+https://youtu.be/w-SpaTBf-j0?si=HYP6fG0H1VYJwj8G
+*/
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', function() {
       navLinks.classList.toggle('active');
@@ -58,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+/*https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth*/
   const dropdownItems = document.querySelectorAll('.has-dropdown');
   
   dropdownItems.forEach(item => {
@@ -65,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (link) {
       link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 1023) {
+        if (window.innerWidth <= 1024) {
           e.preventDefault();
           item.classList.toggle('open');
 
@@ -79,8 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+ /*https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event*/ 
   window.addEventListener('resize', function() {
-    if (window.innerWidth > 1023) {
+    if (window.innerWidth > 1024) {
       dropdownItems.forEach(item => {
         item.classList.remove('open');
       });
@@ -88,6 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   /*Image Lazy*/
+  /*https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading
+  https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src
+  https://youtu.be/RaIp3yomqBI?si=7EMeD-If4MhqrLxg*/
   const images = document.querySelectorAll('img[data-src]');
   
   if (images.length > 0 && 'IntersectionObserver' in window) {
@@ -108,6 +126,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   /*Bio Timeline*/
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/max-height
+  https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight
+  https://youtu.be/Q3ipHIy-YG0?si=7g1YwJvUWPKAy219
+  https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+  https://youtu.be/SowV5KGrv1o?si=w76cbWZrmBxch5TQ*/
   const timeline = document.getElementById('timeline');
   if (timeline) {
     let active = null;
@@ -155,6 +178,21 @@ document.addEventListener('DOMContentLoaded', function() {
 }); 
 
 /*Works Carousel*/
+/*https://www.w3schools.com/howto/howto_js_slideshow.asp
+https://youtu.be/JX5qDzWDF4U?si=A1N9X8eQeieTeBpg
+https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder
+https://www.w3schools.com/js/js_arithmetic.asp
+https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
+https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
+https://youtu.be/bB8-JziGLpo?si=PktlVokbVNIHLudR
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click
+https://developer.mozilla.org/en-US/docs/Web/API/Touch_events
+https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent
+https://youtu.be/TaPdgj8mucI?si=8HXMnRbglmyWl9S3
+https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/changedTouches
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+*/
 (function() {
   'use strict';
 
@@ -274,6 +312,10 @@ document.addEventListener('DOMContentLoaded', function() {
 })();
 
 /*Scroll Top*/
+/*https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
+https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll
+https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+https://youtu.be/SJVCvnKM_lI?si=KZKVCoKOKrJ4fo2Y*/
 const scrollTopBtn = document.getElementById('scroll-top');
 
 if (scrollTopBtn) {
