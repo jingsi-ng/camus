@@ -104,6 +104,14 @@
         filter: brightness(1) contrast(1);
     }
 
+    .timeline-bg {
+        opacity: 0.05;
+    }
+
+    .timeline-bg .bg-text {
+        color: var(--color-secondary);
+    }
+
     .mountain-shape {
         fill: rgba(255, 255, 255, 0.1);
     }
@@ -1051,6 +1059,45 @@ h1, h2, h3, h4, h5, h6 {
 .timeline-section {
     padding: 8rem 0;
     background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.06;
+}
+
+.timeline-bg .bg-mark {
+    display: block;
+    font-family: var(--font-body);
+    font-size: clamp(6rem, 15vw, 12rem);
+    line-height: 0.5;
+    color: var(--color-accent);
+}
+
+.timeline-bg .bg-text {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-top: 1.5rem;
+    padding: 0.2rem;
+}
+
+.timeline-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .timeline {
@@ -1113,6 +1160,30 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 0 4px rgba(196, 165, 116, 0.2);
 }
 
+.event-major .event-dot {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    border-style: solid;
+}
+
+.event-major:hover .event-dot, .event-major.active .event-dot {
+    background: var(--sand-light);
+    border-color: var(--sand-light);
+    box-shadow: 0 0 0 6px rgba(196, 165, 116, 0.25);
+}
+
+.event-end .event-dot {
+    background: transparent;
+    border: 3px dashed var(--text-primary);
+    border-style: dashed;
+}
+
+.event-end:hover .event-dot, .event-end.active .event-dot {
+    background: transparent;
+    border-color: var(--text-tertiary);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
 .event-year {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -1120,6 +1191,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-accent);
     margin: 0 0 0.5rem 0;
     letter-spacing: 0.05em;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.timeline-event:hover .event-year {
+    transform: scale(1.05);
 }
 
 .event-title {
@@ -1221,14 +1297,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .bio-section {
     padding: 8rem 0;
-    background: var(--bg-secondary);
+    background: var(--bg-gradient-warm-2);
+}
+
+.bio-section .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .bio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 0;
 }
 
 .bio-cards {
@@ -1236,10 +1317,28 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem;
     border-left: 3px dashed var(--color-accent);
     transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.bio-cards::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-accent);
+    transition: width 0.4s ease;
+}
+
+.bio-cards:hover::after {
+    width: 100%;
 }
 
 .bio-cards:hover {
     transform: translateY(-4px);
+    background: linear-gradient(135deg, var(--bg-primary)0%, var(--bg-secondary)100%);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
@@ -2749,6 +2848,25 @@ blockquote cite::before {
         font-size: 1rem;
     }
 
+    .timeline-bg {
+        opacity: 0.025;
+    }
+
+    .timeline-bg .bg-mark {
+        font-size: 4rem;
+    }
+
+    .timeline-bg .bg-text {
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        padding: 0.1rem;
+    }
+
+    .event-major .event-dot, .event-end .event-dot {
+        width: 12px;
+        height: 12px;
+    }
+
     .carousel-books {
         transform: scale(0.7);
     }
@@ -2931,6 +3049,12 @@ blockquote cite::before {
         flex-direction: column;
         align-items: center;
   }
+}
+
+@media (max-width: 480px) {
+        .timeline-bg {
+            display: none;
+        }
 }
 
 /* Video responsive*/
