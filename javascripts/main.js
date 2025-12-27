@@ -200,6 +200,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
   const books = document.querySelectorAll('.book');
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
+   const dotsContainer = document.getElementById('carousel-dots');
 
   if (!carousel || books.length === 0) return;
 
@@ -213,22 +214,44 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
   function updateCarousel() {
     books.forEach((book, index) => {
-      book.classList.remove('featured', 'prev', 'next', 'hidden');
+      book.classList.remove('featured', 'prev', 'next', 'hidden-left', 'hidden-right');
       
-      const position = index - currentIndex;
+      let relativePos = index - currentIndex;
       
-      book.setAttribute('data-index', getVisualPosition(position));
+      if (relativePos > totalBooks / 2) {
+        relativePos -= totalBooks;
+      } else if (relativePos < -totalBooks / 2) {
+        relativePos += totalBooks;
+      }
       
-      if (position === 0) {
+      if (relativePos === 0) {
         book.classList.add('featured');
+        book.setAttribute('data-index', '1');
+      } else if (relativePos === -1 || (relativePos === totalBooks - 1)) {
+        book.classList.add('prev');
+        book.setAttribute('data-index', '0');
+      } else if (relativePos === 1 || (relativePos === -(totalBooks - 1))) {
+        book.classList.add('next');
+        book.setAttribute('data-index', '2');
+      } else if (relativePos < -1) {
+        book.classList.add('hidden-left');
+        book.setAttribute('data-index', '-1');
+      } else {
+        book.classList.add('hidden-right');
+        book.setAttribute('data-index', '3');
       }
     });
+    
+    updateDots();
   }
 
-  function getVisualPosition(relativePosition) {
-    if (relativePosition === 0) return 1; 
-    if (relativePosition < 0 || relativePosition === totalBooks - 1) return 0; 
-    return 2; 
+  function updateDots() {
+    if (!dotsContainer) return;
+    
+    const dots = dotsContainer.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
+    });
   }
 
   function nextBook() {
@@ -255,6 +278,14 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
     }
 
     document.addEventListener('keydown', function(e) {
+      const carouselSection = document.querySelector('.carousel-section');
+      if (!carouselSection) return;
+      
+      const rect = carouselSection.getBoundingClientRect();
+      const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+      
+      if (!isInView) return;
+      
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
         prevBook();
@@ -277,6 +308,13 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
       });
     });
 
+    if (dotsContainer) {
+      const dots = dotsContainer.querySelectorAll('.dot');
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToBook(index));
+      });
+    }
+
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -295,7 +333,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
       if (Math.abs(diff) > swipeThreshold) {
         if (diff > 0) {
-          nextBook(); 
+          nextBook();
         } else {
           prevBook(); 
         }
