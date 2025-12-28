@@ -178,21 +178,21 @@ https://youtu.be/w-SpaTBf-j0?si=HYP6fG0H1VYJwj8G
 /*Bibliography Accordion*/
 /*https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded*/
-  const workToggles = document.querySelectorAll('.work-toggle');
+  const workToggles = document.querySelectorAll('.works-toggle');
   
   if (workToggles.length > 0) {
     workToggles.forEach(button => {
       button.addEventListener('click', function() {
-        const entry = this.closest('.work-entry');
+        const entry = this.closest('.works-entry');
         const icon = this.querySelector('.toggle-icon');
         const isOpen = entry.classList.contains('open');
         
-        document.querySelectorAll('.work-entry.open').forEach(item => {
+        document.querySelectorAll('.works-entry.open').forEach(item => {
           if (item !== entry) {
             item.classList.remove('open');
             const otherIcon = item.querySelector('.toggle-icon');
             if (otherIcon) otherIcon.textContent = '+';
-            const otherToggle = item.querySelector('.work-toggle');
+            const otherToggle = item.querySelector('.works-toggle');
             if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
           }
         });

@@ -1787,7 +1787,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: calc(50px + 2rem);
     padding: 1.5rem;
     background: var(--bg-secondary);
-    border-left: 2px solid var(--color-accent);
+    border-left: 2px dashed var(--color-accent);
 }
 
 .author-note p {
@@ -1822,7 +1822,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
 }
 
-.works-entry:hover .work-link {
+.works-entry:hover .works-link {
     opacity: 1;
     transform: translateX(0);
 }
@@ -1831,7 +1831,6 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
 
-/* Journey Navigation */
 .journey-next {
     padding: 4rem 0;
     text-align: center;
