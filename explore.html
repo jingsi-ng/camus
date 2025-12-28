@@ -50,10 +50,10 @@
 
 <main>
 
-<section class="explore-hero">
+<section class="page-section">
         <div class="container">
-            <h1>Resources</h1>
-            <p class="hero-subtitle">Videos, Audio, Online Resources & Academic Materials</p>
+            <h1 class="page-title">Resources</h1>
+            <p class="page-subtitle">Videos, Audio, Online Resources & Academic Materials</p>
         </div>
 </section>
 
@@ -74,71 +74,135 @@
         <div class="container">
             <h2 class="section-title">Videos & Documentaries</h2>
             <p class="section-subtitle">Watch and learn more about Camus's life and philosophy</p>           
-            <div class="media-grid">
-                <div class="media-card">
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/jQOfbObFOCw" 
-                            title="Albert Camus - The Absurd Hero"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+            <div class="video-grid">
+            <div class="video-grid">
+            <!-- Video 1: Academy of Ideas - Camus -->
+            <div class="video-card" data-scroll-reveal data-delay="0">
+                <div class="video-thumbnail" data-video-id="jQOfbObFOCw">
+                    <img src="https://img.youtube.com/vi/jQOfbObFOCw/maxresdefault.jpg" 
+                         alt="The Philosophy of Albert Camus"
+                         onerror="this.src='https://img.youtube.com/vi/jQOfbObFOCw/hqdefault.jpg'">
+                    <div class="play-button">
+                        <span>▶</span>
                     </div>
-                    <div class="media-info">
-                        <h3>The Philosophy of Albert Camus</h3>
-                        <p class="media-source">
-                            Source: <a href="https://www.youtube.com/watch?v=jQOfbObFOCw" target="_blank" rel="noopener noreferrer">YouTube - Academy of Ideas</a>
-                        </p>
-                        <p class="media-description">
-                            An introduction to Camus's philosophy of the absurd and his concept of revolt against meaninglessness.
-                        </p>
-                    </div>
+                    <span class="video-duration">12:34</span>
                 </div>
-                <div class="media-card">
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="https://youtu.be/WNCau-HbHVI?si=VvjuXB2DkKNQyAsJ" 
-                            title="The Stranger - Thug Notes Summary & Analysis"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="media-info">
-                        <h3>The Stranger - Summary & Analysis</h3>
-                        <p class="media-source">
-                            Source: <a href="https://youtu.be/WNCau-HbHVI?si=VvjuXB2DkKNQyAsJ" target="_blank" rel="noopener noreferrer">YouTube - Wisecrack</a>
-                        </p>
-                        <p class="media-description">
-                            An engaging breakdown of Camus's most famous novel and its exploration of absurdism and alienation.
-                        </p>
-                    </div>
-                </div>           
-                <div class="media-card">
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="https://youtu.be/qmW7GCcI9yY?si=WMvLzeDcADjsXXIr" 
-                            title="The Myth of Sisyphus - Philosophy Explained"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="media-info">
-                        <h3>The Myth of Sisyphus Explained</h3>
-                        <p class="media-source">
-                            Source: <a href="https://youtu.be/qmW7GCcI9yY?si=WMvLzeDcADjsXXIr" target="_blank" rel="noopener noreferrer">YouTube - Philosophy Tube</a>
-                        </p>
-                        <p class="media-description">
-                            A deep dive into Camus's philosophical essay and its famous conclusion: "One must imagine Sisyphus happy."
-                        </p>
-                    </div>
+                <div class="video-info">
+                    <h3>The Philosophy of Albert Camus</h3>
+                    <p class="video-source">Academy of Ideas</p>
+                    <p class="video-description">An introduction to Camus's philosophy of the absurd and his concept of revolt against meaninglessness. Explores the key themes from The Myth of Sisyphus.</p>
                 </div>
-                
+            </div>
+
+            <!-- Video 2: Wisecrack - The Stranger -->
+            <div class="video-card" data-scroll-reveal data-delay="50">
+                <div class="video-thumbnail" data-video-id="vJG698U2Mvo">
+                    <img src="https://img.youtube.com/vi/vJG698U2Mvo/maxresdefault.jpg" 
+                         alt="The Stranger - Summary & Analysis"
+                         onerror="this.src='https://img.youtube.com/vi/vJG698U2Mvo/hqdefault.jpg'">
+                    <div class="play-button">
+                        <span>▶</span>
+                    </div>
+                    <span class="video-duration">8:21</span>
+                </div>
+                <div class="video-info">
+                    <h3>The Stranger - Summary & Analysis</h3>
+                    <p class="video-source">Wisecrack</p>
+                    <p class="video-description">An engaging breakdown of Camus's most famous novel and its exploration of absurdism and alienation. Perfect introduction to the book.</p>
+                </div>
+            </div>
+
+            <!-- Video 3: Sisyphus Explained -->
+            <div class="video-card" data-scroll-reveal data-delay="100">
+                <div class="video-thumbnail" data-video-id="KgUemDzhHmY">
+                    <img src="https://img.youtube.com/vi/KgUemDzhHmY/maxresdefault.jpg" 
+                         alt="The Myth of Sisyphus Explained"
+                         onerror="this.src='https://img.youtube.com/vi/KgUemDzhHmY/hqdefault.jpg'">
+                    <div class="play-button">
+                        <span>▶</span>
+                    </div>
+                    <span class="video-duration">9:15</span>
+                </div>
+                <div class="video-info">
+                    <h3>The Myth of Sisyphus Explained</h3>
+                    <p class="video-source">Philosophize This!</p>
+                    <p class="video-description">A deep dive into Camus's philosophical essay and its famous conclusion: "One must imagine Sisyphus happy."</p>
+                </div>
+            </div>
+
+            <!-- Video 4: School of Life - Camus -->
+            <div class="video-card" data-scroll-reveal data-delay="150">
+                <div class="video-thumbnail" data-video-id="jE1U2wnffh0">
+                    <img src="https://img.youtube.com/vi/jE1U2wnffh0/maxresdefault.jpg" 
+                         alt="Albert Camus - The School of Life"
+                         onerror="this.src='https://img.youtube.com/vi/jE1U2wnffh0/hqdefault.jpg'">
+                    <div class="play-button">
+                        <span>▶</span>
+                    </div>
+                    <span class="video-duration">8:47</span>
+                </div>
+                <div class="video-info">
+                    <h3>Albert Camus: Philosophy in 8 Minutes</h3>
+                    <p class="video-source">The School of Life</p>
+                    <p class="video-description">A beautifully animated introduction to Camus's life and ideas, perfect for those new to his philosophy.</p>
+                </div>
+            </div>
+
+            <!-- Video 5: Camus vs Sartre -->
+            <div class="video-card" data-scroll-reveal data-delay="200">
+                <div class="video-thumbnail" data-video-id="vOQ5KnB0D1k">
+                    <img src="https://img.youtube.com/vi/vOQ5KnB0D1k/maxresdefault.jpg" 
+                         alt="Camus vs Sartre"
+                         onerror="this.src='https://img.youtube.com/vi/vOQ5KnB0D1k/hqdefault.jpg'">
+                    <div class="play-button">
+                        <span>▶</span>
+                    </div>
+                    <span class="video-duration">15:23</span>
+                </div>
+                <div class="video-info">
+                    <h3>Camus vs Sartre: The Clash of Philosophies</h3>
+                    <p class="video-source">Then & Now</p>
+                    <p class="video-description">Examines the famous intellectual feud between Camus and Sartre over politics, philosophy, and the nature of human freedom.</p>
+                </div>
+            </div>
+
+            <!-- Video 6: The Plague -->
+            <div class="video-card" data-scroll-reveal data-delay="250">
+                <div class="video-thumbnail" data-video-id="FMYDTZzV1FE">
+                    <img src="https://img.youtube.com/vi/FMYDTZzV1FE/maxresdefault.jpg" 
+                         alt="The Plague by Albert Camus"
+                         onerror="this.src='https://img.youtube.com/vi/FMYDTZzV1FE/hqdefault.jpg'">
+                    <div class="play-button">
+                        <span>▶</span>
+                    </div>
+                    <span class="video-duration">14:52</span>
+                </div>
+                <div class="video-info">
+                    <h3>The Plague: A Pandemic of Meaning</h3>
+                    <p class="video-source">Course Hero</p>
+                    <p class="video-description">How Camus's The Plague speaks to our modern condition and offers wisdom for facing collective crisis with solidarity.</p>
+                </div>
             </div>
         </div>
+    </div>
 </section>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Close video">&times;</button>
+        <div class="modal-video-wrapper">
+            <iframe id="modalVideo" 
+                    src="" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
 
 <section class="section-divider">
     <span class="divider-dot"></span>
@@ -146,57 +210,107 @@
     <span class="divider-dot"></span>
 </section>
 
- <section class="explore-section audio-section">
-        <div class="container">
-            <h2 class="section-title">Audio & Podcasts</h2>
-            <p class="section-subtitle">Listen to discussions and readings of Camus's work</p>
+<!-- =====================================================
+     IMPROVED: Audio Section - 增加更多资料
+     ===================================================== -->
+<section class="explore-section audio-section">
+    <div class="container">
+        <h2 class="section-title">Audio & Podcasts</h2>
+        <p class="section-subtitle">Listen to discussions and readings of Camus's work</p>
+        
+        <div class="audio-grid">
+            <div class="audio-card" data-scroll-reveal data-delay="0">
+                <div class="audio-info">
+                    <h3>Camus's Nobel Prize Acceptance Speech</h3>
+                    <p class="audio-description">
+                        Listen to Albert Camus deliver his Nobel Prize acceptance speech in 1957, discussing the role of the artist in society and the responsibility of writers.
+                    </p>
+                    <a href="https://www.nobelprize.org/prizes/literature/1957/camus/speech/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="audio-link">
+                        Listen on NobelPrize.org →
+                    </a>
+                </div>
+            </div>
             
-            <div class="audio-grid">
-                <div class="audio-card">
-                    <div class="audio-info">
-                        <h3>Camus's Nobel Prize Acceptance Speech</h3>
-                        <p class="audio-description">
-                            Listen to Albert Camus deliver his Nobel Prize acceptance speech in 1957, discussing the role of the artist in society.
-                        </p>
-                        <a href="https://www.nobelprize.org/prizes/literature/1957/camus/speech/" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="audio-link">
-                            Listen on NobelPrize.org →
-                        </a>
-                    </div>
+            <div class="audio-card" data-scroll-reveal data-delay="50">
+                <div class="audio-info">
+                    <h3>In Our Time: Albert Camus</h3>
+                    <p class="audio-description">
+                        BBC Radio 4's Melvyn Bragg discusses Camus's life and philosophy with leading academics in this comprehensive podcast episode covering his major works.
+                    </p>
+                    <a href="https://www.bbc.co.uk/programmes/b00gckn5" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="audio-link">
+                        Listen on BBC →
+                    </a>
                 </div>
-                <div class="audio-card">
-                    <div class="audio-info">
-                        <h3>In Our Time: Albert Camus</h3>
-                        <p class="audio-description">
-                            BBC Radio 4's Melvyn Bragg discusses Camus's life and philosophy with leading academics in this comprehensive podcast episode.
-                        </p>
-                        <a href="https://www.bbc.co.uk/programmes/b00gckn5" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="audio-link">
-                            Listen on BBC →
-                        </a>
-                    </div>
+            </div>
+            
+            <div class="audio-card" data-scroll-reveal data-delay="100">
+                <div class="audio-info">
+                    <h3>The Stranger - Audiobook</h3>
+                    <p class="audio-description">
+                        Experience Camus's masterpiece as an audiobook. Various editions are available through Audible and other platforms, narrated by professional voice actors.
+                    </p>
+                    <a href="https://www.audible.com/pd/The-Stranger-Audiobook/B002V1OJ1G" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="audio-link">
+                        Find on Audible →
+                    </a>
                 </div>
-                <div class="audio-card">
-                    <div class="audio-info">
-                        <h3>The Stranger - Audiobook</h3>
-                        <p class="audio-description">
-                            Experience Camus's masterpiece as an audiobook. Various editions are available through Audible and other platforms.
-                        </p>
-                        <a href="https://www.audible.com/pd/The-Stranger-Audiobook/B002V1OJ1G" 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="audio-link">
-                            Find on Audible →
-                        </a>
-                    </div>
+            </div>
+
+            <!-- NEW Audio Items -->
+            <div class="audio-card" data-scroll-reveal data-delay="150">
+                <div class="audio-info">
+                    <h3>Philosophize This!: Albert Camus Series</h3>
+                    <p class="audio-description">
+                        A multi-episode deep dive into Camus's philosophy, covering The Stranger, The Myth of Sisyphus, and The Rebel in accessible, engaging format.
+                    </p>
+                    <a href="https://www.philosophizethis.org/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="audio-link">
+                        Listen to Podcast →
+                    </a>
                 </div>
-                
+            </div>
+
+            <div class="audio-card" data-scroll-reveal data-delay="200">
+                <div class="audio-info">
+                    <h3>The Partially Examined Life: Camus</h3>
+                    <p class="audio-description">
+                        Philosophy podcast featuring in-depth discussion of The Myth of Sisyphus and Camus's relationship to existentialism by hosts with philosophy backgrounds.
+                    </p>
+                    <a href="https://partiallyexaminedlife.com/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="audio-link">
+                        Listen to Podcast →
+                    </a>
+                </div>
+            </div>
+
+            <div class="audio-card" data-scroll-reveal data-delay="250">
+                <div class="audio-info">
+                    <h3>The Plague - Audiobook</h3>
+                    <p class="audio-description">
+                        Camus's allegorical novel about an epidemic gains new relevance. Listen to this powerful exploration of human solidarity in the face of catastrophe.
+                    </p>
+                    <a href="https://www.audible.com/pd/The-Plague-Audiobook/B002VA3GEE" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="audio-link">
+                        Find on Audible →
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
 </section>
 
 <section class="section-divider">
@@ -205,91 +319,142 @@
     <span class="divider-dot"></span>
 </section>
 
+<!-- =====================================================
+     IMPROVED: Academic Resources - 修复排版问题
+     ===================================================== -->
 <section class="explore-section reading-section">
-        <div class="container">
-            <h2 class="section-title">Academic Resources</h2>
-            <p class="section-subtitle">Scholarly books, articles, and online resources for deeper study</p>
+    <div class="container">
+        <h2 class="section-title">Academic Resources</h2>
+        <p class="section-subtitle">Scholarly books, articles, and online resources for deeper study</p>
+        
+        <div class="reading-grid">
             
-            <div class="reading-grid">
-                
-                <div class="reading-category">
-                    <h3>Books About Camus</h3>
-                    <ul class="reading-list">
-                        <li>
-                            <strong>Albert Camus: A Life</strong> by Olivier Todd
-                            <span class="reading-type">Biography</span>
-                        </li>
-                        <li>
-                            <strong>Camus: A Very Short Introduction</strong> by Oliver Gloag
-                            <span class="reading-type">Introduction</span>
-                        </li>
-                        <li>
-                            <strong>The Cambridge Companion to Camus</strong> ed. Edward Hughes
-                            <span class="reading-type">Academic Collection</span>
-                        </li>
-                        <li>
-                            <strong>Camus and Sartre</strong> by Ronald Aronson
-                            <span class="reading-type">Comparative Study</span>
-                        </li>
-                        <li>
-                            <strong>Albert Camus and the Philosophy of the Absurd</strong> by Avi Sagi
-                            <span class="reading-type">Philosophy</span>
-                        </li>
-                    </ul>
-                </div>  
-                <div class="reading-category">
-                    <h3>Online Resources</h3>
-                    <ul class="reading-list">
-                        <li>
-                            <strong>Stanford Encyclopedia of Philosophy</strong>
-                            <span class="reading-type">
-                                <a href="https://plato.stanford.edu/entries/camus/" target="_blank" rel="noopener noreferrer">Read Entry →</a>
-                            </span>
-                        </li>
-                        <li>
-                            <strong>Internet Encyclopedia of Philosophy</strong>
-                            <span class="reading-type">
-                                <a href="https://iep.utm.edu/camus/" target="_blank" rel="noopener noreferrer">Read Entry →</a>
-                            </span>
-                        </li>
-                        <li>
-                            <strong>The Albert Camus Society</strong>
-                            <span class="reading-type">
-                                <a href="https://www.camus-society.com/" target="_blank" rel="noopener noreferrer">Visit Site →</a>
-                            </span>
-                        </li>
-                        <li>
-                            <strong>Project Gutenberg - Free Texts</strong>
-                            <span class="reading-type">
-                                <a href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer">Browse →</a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="reading-category">
-                    <h3>Academic Articles</h3>
-                    <ul class="reading-list">
-                        <li>
-                            <strong>JSTOR Database</strong>
-                            <span class="reading-type">Search "Albert Camus"</span>
-                        </li>
-                        <li>
-                            <strong>Google Scholar</strong>
-                            <span class="reading-type">
-                                <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Search Articles →</a>
-                            </span>
-                        </li>
-                        <li>
-                            <strong>PhilPapers</strong>
-                            <span class="reading-type">
-                                <a href="https://philpapers.org/" target="_blank" rel="noopener noreferrer">Philosophy Database →</a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>              
+            <div class="reading-category" data-scroll-reveal data-delay="0">
+                <h3>Books About Camus</h3>
+                <ul class="reading-list">
+                    <li>
+                        <div class="reading-title">
+                            <strong>Albert Camus: A Life</strong>
+                            <span class="reading-author">by Olivier Todd</span>
+                        </div>
+                        <span class="reading-type">Biography</span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>Camus: A Very Short Introduction</strong>
+                            <span class="reading-author">by Oliver Gloag</span>
+                        </div>
+                        <span class="reading-type">Introduction</span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>The Cambridge Companion to Camus</strong>
+                            <span class="reading-author">ed. Edward Hughes</span>
+                        </div>
+                        <span class="reading-type">Academic</span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>Camus and Sartre</strong>
+                            <span class="reading-author">by Ronald Aronson</span>
+                        </div>
+                        <span class="reading-type">Study</span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>Albert Camus: Philosophy of the Absurd</strong>
+                            <span class="reading-author">by Avi Sagi</span>
+                        </div>
+                        <span class="reading-type">Philosophy</span>
+                    </li>
+                </ul>
             </div>
+            
+            <div class="reading-category" data-scroll-reveal data-delay="50">
+                <h3>Online Resources</h3>
+                <ul class="reading-list">
+                    <li>
+                        <div class="reading-title">
+                            <strong>Stanford Encyclopedia of Philosophy</strong>
+                            <span class="reading-author">Comprehensive academic entry</span>
+                        </div>
+                        <span class="reading-type">
+                            <a href="https://plato.stanford.edu/entries/camus/" target="_blank" rel="noopener noreferrer">Read →</a>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>Internet Encyclopedia of Philosophy</strong>
+                            <span class="reading-author">Detailed philosophical analysis</span>
+                        </div>
+                        <span class="reading-type">
+                            <a href="https://iep.utm.edu/camus/" target="_blank" rel="noopener noreferrer">Read →</a>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>The Albert Camus Society</strong>
+                            <span class="reading-author">UK-based scholarly society</span>
+                        </div>
+                        <span class="reading-type">
+                            <a href="https://www.camus-society.com/" target="_blank" rel="noopener noreferrer">Visit →</a>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>Project Gutenberg</strong>
+                            <span class="reading-author">Free public domain texts</span>
+                        </div>
+                        <span class="reading-type">
+                            <a href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer">Browse →</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="reading-category" data-scroll-reveal data-delay="100">
+                <h3>Academic Articles</h3>
+                <ul class="reading-list">
+                    <li>
+                        <div class="reading-title">
+                            <strong>JSTOR Database</strong>
+                            <span class="reading-author">Academic journal archive</span>
+                        </div>
+                        <span class="reading-type">Search "Camus"</span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>Google Scholar</strong>
+                            <span class="reading-author">Free academic search</span>
+                        </div>
+                        <span class="reading-type">
+                            <a href="https://scholar.google.com/scholar?q=albert+camus" target="_blank" rel="noopener noreferrer">Search →</a>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>PhilPapers</strong>
+                            <span class="reading-author">Philosophy paper database</span>
+                        </div>
+                        <span class="reading-type">
+                            <a href="https://philpapers.org/s/camus" target="_blank" rel="noopener noreferrer">Search →</a>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="reading-title">
+                            <strong>Academia.edu</strong>
+                            <span class="reading-author">Research sharing platform</span>
+                        </div>
+                        <span class="reading-type">
+                            <a href="https://www.academia.edu/" target="_blank" rel="noopener noreferrer">Browse →</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            
         </div>
- </section>
+    </div>
+</section>
 
 <button class="scroll-top" id="scroll-top" aria-label="Scroll to Top">↑</button>
 

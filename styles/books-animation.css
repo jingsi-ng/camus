@@ -358,6 +358,114 @@ https://youtu.be/SgmNxE9lWcY?si=eL-BDiz5qxFEiq2h*/
   }
 }
 
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+https://developer.mozilla.org/en-US/docs/Web/CSS/filter*/
+.beach-scene {
+    position: fixed;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+    height: 120px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.07;
+}
+
+.sand-line {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: #C4A574;
+    opacity: 0.6;
+}
+
+.figure {
+    position: absolute;
+    bottom: 22px;
+    width: 24px;
+    height: 60px;
+    background: #2b2b2b;
+}
+
+.figure-meursault {
+    left: 38%;
+    clip-path: polygon(
+        /*head*/
+        35% 0%, 65% 0%, 75% 3%, 80% 8%, 80% 12%, 75% 17%, 65% 20%, 35% 20%, 25% 17%, 20% 12%, 20% 8%, 25% 3%,
+        /*neck*/
+        40% 20%, 40% 24%, 
+        /*left hand and left arm*/
+        15% 28%, 0% 35%, 0% 40%, 15% 42%, 30% 38%,
+        /*left body*/
+        30% 58%,
+        /*left leg*/
+        25% 62%, 22% 100%, 38% 100%, 40% 62%,
+        /**/
+        50% 60%,
+        /*right leg*/
+        60% 62%, 62% 100%, 78% 100%, 75% 62%,
+        /*right body*/
+        70% 58%, 70% 38%,
+        /*right hand and right arm*/
+        75% 28%, 80% 50%, 72% 52%, 65% 32%,
+        /*neck*/
+        60% 24%, 60% 20%
+    );
+    animation: figure-shimmer 5s ease-in-out infinite;
+}
+
+.figure-arab {
+    right: 38%;
+    clip-path: polygon(
+        /*head*/
+        35% 0%, 65% 0%, 75% 3%, 80% 8%, 80% 12%, 75% 17%, 65% 20%, 35% 20%, 25% 17%, 20% 12%, 20% 8%, 25% 3%,
+        /*neck*/
+        40% 20%, 40% 24%,
+        /*left hand and left arm*/
+        25% 28%, 20% 50%, 28% 52%, 35% 32%,
+        /*left body*/
+        30% 58%,
+        /*left leg*/
+        25% 62%, 22% 100%, 38% 100%, 40% 62%,
+        /**/
+        50% 60%,
+        /*right leg*/
+        60% 62%, 62% 100%, 78% 100%, 75% 62%,
+        /*right body*/
+        70% 58%, 70% 38%,
+        /*right hand and right arm*/
+        85% 28%, 100% 35%, 100% 40%, 85% 42%, 70% 38%,
+        /*neck*/
+        60% 24%, 60% 20%
+    );
+    animation: figure-shimmer 5s ease-in-out infinite 0.3s;
+}
+
+@keyframes figure-shimmer {
+    0%, 100% {
+        transform: scaleX(1) scaleY(1);
+        filter: blur(0px);
+    }
+    20% {
+        transform: scaleX(1.015) scaleY(0.995);
+        filter: blur(0.3px);
+    }
+    40% {
+        transform: scaleX(0.985) scaleY(1.005);
+        filter: blur(0.5px);
+    }
+    60% {
+        transform: scaleX(1.01) scaleY(0.99);
+        filter: blur(0.4px);
+    }
+    80% {
+        transform: scaleX(0.99) scaleY(1.01);
+        filter: blur(0.2px);
+    }
+}
+
 /*Happy Death*/
 .happy-page {
     position: relative;
