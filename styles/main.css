@@ -2140,230 +2140,156 @@ blockquote cite::before {
 }
 
 .explore-section {
-    padding: 8rem 0;
+    padding: 6rem 0;
 }
 
-.explore-section:nth-child(odd) {
+.videos-section {
+    background: var(--bg-secondary);
+}
+
+.audio-section {
     background: var(--bg-primary);
 }
 
-.explore-section:nth-child(even) {
+.reading-section {
     background: var(--bg-secondary);
 }
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
+.video-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .video-card {
-    background: var(--bg-card);
+    background: var(--bg-primary);
     overflow: hidden;
     transition: all var(--transition-fast);
 }
 
-.video-card:hover {
+.video-card-link:hover .video-card {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.video-thumbnail {
+.video-placeholder {
     position: relative;
     aspect-ratio: 16 / 9;
-    overflow: hidden;
-    cursor: pointer;
-    background: var(--bg-dark);
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px dashed var(--color-accent);
 }
 
-.video-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease, filter 0.3s ease;
+.video-placeholder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.video-thumbnail:hover img {
-    transform: scale(1.05);
-    filter: brightness(0.7);
-}
-
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70px;
-    height: 70px;
-    background: rgba(0, 0, 0, 0.7);
+.video-icon {
+    width: 60px;
+    height: 60px;
+    background: transparent;
     border: 2px solid var(--color-accent);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    padding-left: 4px;
     transition: all 0.3s ease;
 }
 
-.play-button span {
-    color: var(--color-accent);
-    font-size: 1.5rem;
-    margin-left: 4px;
-}
-
-.video-thumbnail:hover .play-button {
+.video-card-link:hover .video-icon {
     background: var(--color-accent);
-    transform: translate(-50%, -50%) scale(1.1);
+    color: #000;
 }
 
-.video-thumbnail:hover .play-button span {
-    color: var(--bg-dark);
-}
-
-.video-duration {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    color: var(--color-secondary);
+.video-label {
     font-family: var(--font-heading);
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    letter-spacing: 0.05em;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
 }
 
-.video-info {
+.video-card-link:hover .video-label {
+    color: var(--color-accent);
+}
+
+.video-placeholder .video-duration {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    letter-spacing: 0.08em;
+}
+
+.video-card .video-info {
     padding: 1.5rem;
 }
 
-.video-info h3 {
-    font-size: 1.1rem;
+.video-card .video-info h3 {
+    font-size: 1.05rem;
     margin: 0 0 0.5rem 0;
     color: var(--text-primary);
     line-height: 1.3;
 }
 
-.video-source {
+.video-card-link:hover .video-info h3 {
+    color: var(--color-accent);
+}
+
+.video-card .video-source {
     font-family: var(--font-heading);
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-accent);
     margin: 0 0 0.75rem 0;
 }
 
-.video-description {
+.video-card .video-description {
     font-size: 0.9rem;
     line-height: 1.6;
     color: var(--text-secondary);
     margin: 0;
 }
 
-.video-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.video-modal.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-    position: relative;
-    width: 90%;
-    max-width: 900px;
-    z-index: 2001;
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-}
-
-.video-modal.active .modal-content {
-    transform: scale(1);
-}
-
-.modal-close {
-    position: absolute;
-    top: -50px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 1px solid var(--color-accent);
-    color: var(--color-accent);
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition-fast);
-}
-
-.modal-close:hover {
-    background: var(--color-accent);
-    color: var(--bg-dark);
-}
-
-.modal-video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    background: var(--bg-dark);
-}
-
-.modal-video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
 .audio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
 .audio-card {
-    display: flex;
-    gap: 1.5rem;
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
     padding: 2rem;
     border-right: 3px dashed var(--color-accent);
     transition: all var(--transition-fast);
 }
 
 .audio-card:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.audio-icon {
-    font-size: 2.5rem;
-    flex-shrink: 0;
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .audio-info h3 {
-    font-size: 1.125rem;
+    font-size: 1.05rem;
     margin: 0 0 0.75rem 0;
     color: var(--text-primary);
 }
@@ -2377,7 +2303,7 @@ blockquote cite::before {
 
 .audio-link {
     font-family: var(--font-heading);
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     letter-spacing: 0.05em;
     color: var(--color-accent);
     text-decoration: none;
@@ -2390,17 +2316,17 @@ blockquote cite::before {
 
 .reading-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
 .reading-category {
-    background: var(--bg-card);
+    background: var(--bg-primary);
     padding: 2rem;
 }
 
 .reading-category h3 {
-    font-size: 1.125rem;
+    font-size: 1.05rem;
     margin: 0 0 1.5rem 0;
     padding-bottom: 0.75rem;
     border-bottom: 2px solid var(--color-accent);
@@ -2420,7 +2346,6 @@ blockquote cite::before {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
-    flex-wrap: wrap;
 }
 
 .reading-list li:last-child {
@@ -2436,9 +2361,8 @@ blockquote cite::before {
     display: block;
     font-weight: 600;
     color: var(--text-primary);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.4;
-    word-wrap: break-word;
 }
 
 .reading-author {
@@ -2448,25 +2372,9 @@ blockquote cite::before {
     margin-top: 0.25rem;
 }
 
-.reading-list strong {
-    font-weight: 600;
-    color: var(--text-primary);
-    font-size: 0.95rem;
-}
-
-.reading-list a {
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-}
-
-.reading-list a:hover {
-    color: var(--color-accent);
-}
-
 .reading-type {
     font-family: var(--font-heading);
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -2474,7 +2382,6 @@ blockquote cite::before {
     padding: 0.25rem 0.5rem;
     flex-shrink: 0;
     white-space: nowrap;
-    align-self: flex-start;
 }
 
 .reading-type a {
