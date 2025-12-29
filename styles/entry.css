@@ -316,12 +316,34 @@ transform: translateX(20px);
     .core-highlight {
         color: #ffd700;
     }
+    
+    .enter-link {
+        border-width: 3px;
+    }
 }
 
-/*Responsive Design - Mobile*/
+/*Responsive Design*/
+@media (max-width: 1024px) {
+    .french-quote {
+        font-size: 40px;
+    }
+    
+    .english-quote {
+        font-size: 22px;
+    }
+    
+    .core-text {
+        font-size: 26px;
+    }
+    
+    .enter-link {
+        padding: 1.75rem 3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .french-quote {
-        font-size: 36px;
+        font-size: 32px;
         letter-spacing: 0.05em;
     }
 
@@ -330,15 +352,32 @@ transform: translateX(20px);
     }
 
     .core-text {
-        font-size: 24px;
+        font-size: 22px;
+    }
+    
+    .core-subtext {
+        font-size: 11px;
     }
 
     .enter-link {
-        padding: 2rem 3rem;
+        padding: 1.5rem 2.5rem;
     }
 
     .enter-text2 {
-        font-size: 18px;
+        font-size: 16px;
+    }
+    
+    .arrow {
+        font-size: 24px;
+    }
+    
+    .action {
+        bottom: 3rem;
+        font-size: 8px;
+    }
+    
+    .entry-container {
+        padding-bottom: 12vh;
     }
 }
 
