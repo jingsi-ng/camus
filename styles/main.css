@@ -56,7 +56,7 @@
 @media (prefers-color-scheme: dark) {
     :root{
     --color-primary: #ffffff;
-    --color-secondary: #000000;
+    --color-secondary: #cccccc;
     --color-accent: #e8b86d;
 
     --bg-primary: #000000;
@@ -109,7 +109,7 @@
     }
 
     .timeline-bg .bg-text {
-        color: var(--color-secondary);
+        color: var(--text-secondary);
     }
 
     .mountain-shape {
@@ -694,7 +694,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gallery-section .section-title {
-    color: var(--color-secondary);
+    color: var(--text-secondary);
 }
 
 .gallery-section .section-subtitle {
@@ -905,7 +905,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     line-height: 1.6;
     font-style: italic;
-    color: var(--color-secondary);
+    color: var(--text-secondary);
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%, -40%);
@@ -1910,7 +1910,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
     margin: 0 0 0.5rem 0;
-    color: var(--color-secondary);
+    color: var(--text-secondary);
 }
 
 .work-french {
@@ -2849,7 +2849,7 @@ blockquote cite::before {
 }
 
 .contact-section h2 {
-    color: var(--color-secondary);
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
 }
 
@@ -3039,7 +3039,7 @@ blockquote cite::before {
 }
 
 .cta-link:hover {
-    color: var(--color-secondary);
+    color: var(--text-secondary);
 }
 
 .cta-divider {
@@ -3390,7 +3390,7 @@ blockquote cite::before {
         writing-mode: horizontal-tb;
         transform: none;
         font-size: 0.9rem;
-        color: var(--color-secondary);
+        color: var(--text-secondary);
         margin-top: 0;
     }
   
