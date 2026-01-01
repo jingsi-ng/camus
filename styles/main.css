@@ -195,6 +195,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 1px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
 /*Header*/
 .header-nav {
     position: sticky;
@@ -3046,7 +3052,6 @@ blockquote cite::before {
     color: var(--text-light-30);
     font-size: 0.8rem;
 }
-
 
 [data-scroll-reveal] {
     opacity: 0;
