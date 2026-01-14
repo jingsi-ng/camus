@@ -3158,19 +3158,22 @@ blockquote cite::before {
     }
 
     .hero-section {
-        flex-direction: column;
-        padding: 2rem 0;
+        grid-template-columns: 1fr;
+        min-height: auto;
     }
     
     .hero-image {
         width: 100%;
-        order: -1;
-        margin-bottom: 2rem;
+        height: 50vh;
+        max-height: 400px;
     }
     
+    .hero-portrait {
+        object-position: center 20%;
+    }
+
     .hero-text {
-        width: 100%;
-        padding: 0;
+        padding: 3rem 2rem;
     }
     
     .hero-title {
