@@ -3099,6 +3099,59 @@ blockquote cite::before {
     .mobile-menu-toggle {
         display: flex;
     }
+
+    .has-dropdown {
+        position: static;
+    }
+
+    .has-dropdown > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .has-dropdown > a::after {
+        content: '+';
+        font-size: 1rem;
+        font-family: var(--font-heading);
+        transition: none;
+        transform: none;
+    }
+
+    .has-dropdown.open > a::after {
+        content: '-';
+    }
+
+    .dropdown {
+        position: static;
+        transform: none;
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        border: none;
+        background: var(--bg-secondary);
+        min-width: 100%;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .has-dropdown.open .dropdown {
+        max-height: 300px;
+    }
+
+    .dropdown a {
+        padding: 1rem 2.5rem;
+        font-size: 0.85rem;
+        border-left: none;
+        border-bottom: 1px dashed var(--border-primary);
+    }
+
+    .dropdown a:last-child {
+        border-bottom: none;
+    }
     
     .logo {
         font-size: 1.25rem;
@@ -3161,8 +3214,9 @@ blockquote cite::before {
     }
 
     .work-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 2rem;
+        text-align: center;
     }
     
     .work-cover {

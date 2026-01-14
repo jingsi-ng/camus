@@ -38,8 +38,8 @@ if ('IntersectionObserver' in window) {
 
 document.addEventListener('DOMContentLoaded', function() {
 
- /*Nav*/
- /*https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector*/
+/*Nav*/
+/*https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector*/
   const menuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
@@ -80,15 +80,21 @@ https://youtu.be/w-SpaTBf-j0?si=HYP6fG0H1VYJwj8G
     if (link) {
       link.addEventListener('click', function(e) {
         if (window.innerWidth <= 1024) {
-          e.preventDefault();
-          item.classList.toggle('open');
+          const isOpen = item.classList.contains('open');
 
           dropdownItems.forEach(other => {
             if (other !== item) {
               other.classList.remove('open');
             }
           });
-        }
+
+          if (isOpen) {
+            return true;
+          } else {
+            e.preventDefault();
+            item.classList.add('open');
+          }
+          }
       });
     }
   });
