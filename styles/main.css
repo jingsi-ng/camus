@@ -3479,17 +3479,22 @@ blockquote cite::before {
     }
     
     .about-section {
-        padding: 6rem 0 3rem;
+        padding: 4rem 0 3rem;
     }
-  
-    .about-content {
+
+    .about-hero {
         grid-template-columns: 1fr;
+        gap: 2rem;
         text-align: center;
     }
   
     .about-photo {
         max-width: 180px;
         margin: 0 auto;
+    }
+
+    .content-section {
+        padding: 4rem 0;
     }
   
     .about-grid {
