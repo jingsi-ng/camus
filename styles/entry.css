@@ -6,6 +6,7 @@
     overflow: hidden;
 }
 
+/*entry page nav*/
 .entry-nav {
     position: fixed;
     top: 0;
@@ -20,24 +21,24 @@
     gap: 5px;
     padding: 0.5rem;
     background: transparent;
-    border: 1px dashed var(--sand-alpha-30);
+    border: 1px dashed rgba(196, 165, 116, 0.3);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .entry-menu-toggle:hover {
-    border-color: var(--color-accent);
+    border-color: #c4a574;
 }
 
 .entry-menu-toggle span {
     width: 20px;
     height: 1px;
-    background: var(--sand-alpha-70);
+    background: rgba(196, 165, 116, 0.7);
     transition: all 0.3s ease;
 }
 
 .entry-menu-toggle:hover span {
-    background: var(--color-accent);
+    background: #c4a574;
 }
 
 .entry-menu {
@@ -46,8 +47,8 @@
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: var(--bg-dark);
-    border-left: 1px dashed var(--color-accent);
+    background: #000000;
+    border-left: 1px dashed #c4a574;
     padding: 4rem 2rem;
     transition: right 0.4s ease;
     z-index: 1001;
@@ -62,7 +63,7 @@
     top: 1.5rem;
     right: 1.5rem;
     font-size: 1.5rem;
-    color: var(--text-light-60);
+    color: rgba(255, 255, 255, 0.6);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -70,7 +71,7 @@
 }
 
 .entry-menu-close:hover {
-    color: var(--color-accent);
+    color: #c4a574;
 }
 
 .entry-menu-links {
@@ -85,18 +86,19 @@
 
 .entry-menu-links a {
     display: block;
-    font-family: var(--font-heading);
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
     font-size: 0.9rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--text-light-60);
+    color: rgba(255, 255, 255, 0.6);
     padding: 1rem 0;
-    border-bottom: 1px dashed var(--sand-alpha-30);
+    border-bottom: 1px dashed rgba(196, 165, 116, 0.3);
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .entry-menu-links a:hover {
-    color: var(--color-accent);
+    color: #c4a574;
     padding-left: 0.5rem;
 }
 
@@ -118,6 +120,7 @@
     visibility: visible;
 }
 
+/*entry page*/
 .starry {
     position: fixed;
     top: 0;
