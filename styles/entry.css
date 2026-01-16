@@ -6,6 +6,118 @@
     overflow: hidden;
 }
 
+.entry-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.5rem;
+}
+
+.entry-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    background: transparent;
+    border: 1px dashed var(--sand-alpha-30);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.entry-menu-toggle:hover {
+    border-color: var(--color-accent);
+}
+
+.entry-menu-toggle span {
+    width: 20px;
+    height: 1px;
+    background: var(--sand-alpha-70);
+    transition: all 0.3s ease;
+}
+
+.entry-menu-toggle:hover span {
+    background: var(--color-accent);
+}
+
+.entry-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-dark);
+    border-left: 1px dashed var(--color-accent);
+    padding: 4rem 2rem;
+    transition: right 0.4s ease;
+    z-index: 1001;
+}
+
+.entry-menu.open {
+    right: 0;
+}
+
+.entry-menu-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-light-60);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.entry-menu-close:hover {
+    color: var(--color-accent);
+}
+
+.entry-menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
+
+.entry-menu-links li {
+    margin-bottom: 0;
+}
+
+.entry-menu-links a {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-light-60);
+    padding: 1rem 0;
+    border-bottom: 1px dashed var(--sand-alpha-30);
+    transition: all 0.3s ease;
+}
+
+.entry-menu-links a:hover {
+    color: var(--color-accent);
+    padding-left: 0.5rem;
+}
+
+.entry-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.entry-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
 .starry {
     position: fixed;
     top: 0;

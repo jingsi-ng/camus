@@ -3,6 +3,32 @@ https://www.runoob.com/js/js-tutorial.html
 https://youtu.be/hdI2bqOjy3c?si=f0VjlX_HamU2Qf8U
 https://youtu.be/y17RuWkWdn8?si=PLdLtxmPAXuZltdP*/
 
+/*entry page nav*/
+const entryToggle = document.querySelector('.entry-menu-toggle');
+const entryMenu = document.querySelector('.entry-menu');
+const entryClose = document.querySelector('.entry-menu-close');
+
+if (entryToggle && entryMenu) {
+    const overlay = document.createElement('div');
+    overlay.className = 'entry-overlay';
+    document.body.appendChild(overlay);
+    
+    entryToggle.addEventListener('click', function() {
+        entryMenu.classList.add('open');
+        overlay.classList.add('open');
+    });
+    
+    entryClose.addEventListener('click', function() {
+        entryMenu.classList.remove('open');
+        overlay.classList.remove('open');
+    });
+    
+    overlay.addEventListener('click', function() {
+        entryMenu.classList.remove('open');
+        overlay.classList.remove('open');
+    });
+}
+
 /*https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 https://www.w3schools.com/js/js_strict.asp*/
